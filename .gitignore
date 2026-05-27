@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Experiment artifacts
+*.log
+*.pid
+*.pt
+*.pth
+*.ckpt
+*.model
+*.pred.mrg
+*.oracle.jsonl
+*.oracle.txt
+*.paper_actions.txt
+
+# Treebanks and large generated directories
+data/
+data_ctb/
+base_dir/
+bottomup_runs/
+bottomup_runs_ctb/
+prediction_oracles/
+bottomup_eval_external/
+evaluators/
+.venv/

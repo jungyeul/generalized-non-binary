@@ -1,0 +1,114 @@
+{
+  "table2": {
+    "Arity-specific bottom-up": {
+      "CTB": 59.445280437756495,
+      "PTB": 44.69634204514072
+    },
+    "Binary bottom-up": {
+      "CTB": 54.63588164870874,
+      "PTB": 47.701747338823054
+    },
+    "Delimiter-guided bottom-up": {
+      "CTB": 77.5609325125399,
+      "PTB": 58.309934473149056
+    }
+  },
+  "table4": {
+    "Arity-specific bottom-up": {
+      "CTB": {
+        "action_inventory_size": 190
+      },
+      "PTB": {
+        "action_inventory_size": 205
+      }
+    },
+    "Binary bottom-up": {
+      "CTB": {
+        "action_inventory_size": 148
+      },
+      "PTB": {
+        "action_inventory_size": 126
+      }
+    },
+    "Delimiter-guided bottom-up": {
+      "CTB": {
+        "action_inventory_size": 64
+      },
+      "PTB": {
+        "action_inventory_size": 81
+      }
+    }
+  },
+  "table5": {
+    "CTB": {
+      "A": {
+        "k=1": 3414,
+        "k=2": 3712,
+        "k=3": 1117,
+        "k=4": 183,
+        "k>=5": 231
+      },
+      "D": {
+        "k=1": 3470,
+        "k=2": 3748,
+        "k=3": 1099,
+        "k=4": 187,
+        "k>=5": 229
+      },
+      "G": {
+        "k=1": 3482,
+        "k=2": 3698,
+        "k=3": 1121,
+        "k=4": 184,
+        "k>=5": 235
+      }
+    },
+    "PTB": {
+      "A": {
+        "k=1": 8806,
+        "k=2": 24215,
+        "k=3": 8224,
+        "k=4": 2274,
+        "k>=5": 1718
+      },
+      "D": {
+        "k=1": 8901,
+        "k=2": 24296,
+        "k=3": 8242,
+        "k=4": 2357,
+        "k>=5": 1705
+      },
+      "G": {
+        "k=1": 9012,
+        "k=2": 24440,
+        "k=3": 8214,
+        "k=4": 2342,
+        "k>=5": 1694
+      }
+    }
+  },
+  "table6": {
+    "CTB": {
+      "errors": {
+        "Missing D-SHIFT": 86,
+        "Premature REDUCE": 125,
+        "Spurious D-REDUCE": 108,
+        "Spurious D-SHIFT": 94
+      },
+      "leaf_mismatches_skipped": 0,
+      "matched_reductions": 7761,
+      "sentences": 348
+    },
+    "PTB": {
+      "errors": {
+        "Missing D-SHIFT": 381,
+        "Premature REDUCE": 506,
+        "Spurious D-REDUCE": 495,
+        "Spurious D-SHIFT": 314
+      },
+      "leaf_mismatches_skipped": 0,
+      "matched_reductions": 42041,
+      "sentences": 2416
+    }
+  }
+}
