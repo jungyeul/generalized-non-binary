@@ -1,0 +1,51 @@
+table	corpus	system_or_source	metric	value
+2	PTB	Binary bottom-up	avg_transition_length	47.701747
+2	CTB	Binary bottom-up	avg_transition_length	54.635882
+2	PTB	Arity-specific bottom-up	avg_transition_length	44.696342
+2	CTB	Arity-specific bottom-up	avg_transition_length	59.445280
+2	PTB	Delimiter-guided bottom-up	avg_transition_length	58.309934
+2	CTB	Delimiter-guided bottom-up	avg_transition_length	77.560933
+4	PTB	Binary bottom-up	action_inventory_size	126
+4	CTB	Binary bottom-up	action_inventory_size	148
+4	PTB	Arity-specific bottom-up	action_inventory_size	205
+4	CTB	Arity-specific bottom-up	action_inventory_size	190
+4	PTB	Delimiter-guided bottom-up	action_inventory_size	81
+4	CTB	Delimiter-guided bottom-up	action_inventory_size	64
+5	PTB	G	k=1	9012
+5	PTB	G	k=2	24440
+5	PTB	G	k=3	8214
+5	PTB	G	k=4	2342
+5	PTB	G	k>=5	1694
+5	PTB	A	k=1	8806
+5	PTB	A	k=2	24215
+5	PTB	A	k=3	8224
+5	PTB	A	k=4	2274
+5	PTB	A	k>=5	1718
+5	PTB	D	k=1	8901
+5	PTB	D	k=2	24296
+5	PTB	D	k=3	8242
+5	PTB	D	k=4	2357
+5	PTB	D	k>=5	1705
+5	CTB	G	k=1	3482
+5	CTB	G	k=2	3698
+5	CTB	G	k=3	1121
+5	CTB	G	k=4	184
+5	CTB	G	k>=5	235
+5	CTB	A	k=1	3414
+5	CTB	A	k=2	3712
+5	CTB	A	k=3	1117
+5	CTB	A	k=4	183
+5	CTB	A	k>=5	231
+5	CTB	D	k=1	3470
+5	CTB	D	k=2	3748
+5	CTB	D	k=3	1099
+5	CTB	D	k=4	187
+5	CTB	D	k>=5	229
+6	PTB	Delimiter-guided	Missing D-SHIFT	381
+6	PTB	Delimiter-guided	Spurious D-SHIFT	314
+6	PTB	Delimiter-guided	Premature REDUCE	506
+6	PTB	Delimiter-guided	Spurious D-REDUCE	495
+6	CTB	Delimiter-guided	Missing D-SHIFT	86
+6	CTB	Delimiter-guided	Spurious D-SHIFT	94
+6	CTB	Delimiter-guided	Premature REDUCE	125
+6	CTB	Delimiter-guided	Spurious D-REDUCE	108
