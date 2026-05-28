@@ -11,6 +11,12 @@ This branch contains the current Stanza-based implementation used for the bottom
 
 Large generated files are intentionally not committed: treebank data, model checkpoints, training logs, evaluation logs, and full prediction/oracle dumps.
 
+## Stanza Source Reference
+
+The implementation was built on a local copy of Stanza version `1.11.0`, as recorded in `stanza-main/stanza/_version.py`.
+
+For future upstream merging reference, the local source directory on the Linux server was already present by `2026-01-03 20:58:31 UTC` (`/home/zihopc/vscode/Jungyeul/20251116_stanza/stanza-main`). I do not currently have the original upstream Git commit hash because that local source copy was not preserved as a Git checkout.
+
 ## Main Implementation Files
 
 The core bottom-up changes are concentrated in:
