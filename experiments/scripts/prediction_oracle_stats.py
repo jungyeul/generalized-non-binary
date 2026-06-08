@@ -18,7 +18,7 @@ FILES = {
     ("PTB", "dev", "Binary"): ROOT / "bottomup_runs/predictions/binary_dev.pred.mrg",
     ("PTB", "test", "Binary"): ROOT / "bottomup_runs/predictions/binary_test.pred.mrg",
     ("PTB", "dev", "Arity"): ROOT / "bottomup_runs/predictions/arity_dev.pred.mrg",
-    ("PTB", "test", "Arity"): ROOT / "bottomup_runs/predictions/arity_test.validyield_fallback.pred.mrg",
+    ("PTB", "test", "Arity"): ROOT / "bottomup_runs/predictions/arity_test.pred.mrg",
     ("PTB", "dev", "Delimiter"): ROOT / "bottomup_runs/predictions/delimiter_dev.pred.mrg",
     ("PTB", "test", "Delimiter"): ROOT / "bottomup_runs/predictions/delimiter_test.pred.mrg",
     ("CTB", "dev", "Binary"): ROOT / "bottomup_runs_ctb/predictions/binary_dev.pred.mrg",

@@ -1,11 +1,11 @@
 # Binary and PTB Arity Failure Investigation
 
-Date: 2026-05-27
+Updated: 2026-06-08
 
 This note summarizes the current investigation into two low-priority but important issues:
 
 - poor binary test results
-- 24 invalid PTB arity test predictions
+- the historical 24 invalid PTB arity test predictions
 
 ## Binary Results
 
@@ -67,9 +67,10 @@ Likely fix before rebuttal:
 2. Predict binary test from that binary-transformed test file.
 3. Debinarize and evaluate against the original CTB test file.
 
-## PTB Arity 24 Failed Sentences
+## PTB Arity Repeated Sentence
 
-The raw PTB arity test prediction contains 24 invalid ROOT/yield cases.
+The original PTB arity test prediction contained 24 invalid ROOT/yield cases,
+but only one sentence actually reached the decoder transition limit.
 
 Observed pattern:
 
@@ -81,14 +82,61 @@ Observed pattern:
 ( See related story : `` Fed Ready to Inject Big Funds '' -- WSJ Oct. 16 , 1989 )
 ```
 
-Sentence 83 is the only case where that yield actually matches the gold sentence, but it still has an invalid non-unary ROOT. The other 23 cases incorrectly reuse this same output for unrelated 17-token sentences.
+Sentence 84 (1-based; index 83) is the only case where that yield actually
+matches the gold sentence, but it still had an invalid non-unary ROOT. The
+other 23 cases incorrectly reused this same output for unrelated 17-token
+sentences.
 
-This pattern does not look like ordinary model parsing error. It is more consistent with an output bookkeeping issue during batch prediction: one predicted tree is being reused/written for multiple sentence positions after decoding. The earlier `base_model.py` batch-index patch was audited but did not eliminate the issue, so the next step is to instrument prediction with sentence IDs and verify where the output tree is assigned to the result list.
+The root cause was in `BaseModel.bulk_apply`. When one state was marked
+`broken`, transitions were filtered but the corresponding state list was not.
+The subsequent `zip` paired transitions with the wrong states, copying the
+broken sentence's constituent stack into the remaining active batch entries.
 
-For the paper numbers, we used the conservative valid-yield fallback file so all 2416 PTB test sentences are counted:
+The fix filters states and transitions together. It also emits a legal unary
+`ROOT` fallback for the one genuinely broken decode and verifies that parse
+result indices are complete and unique.
 
-- raw Stanza arity test: F1 92.84 on N=2392
-- conservative fallback: F1 92.53 on N=2416
+Verified corrected result:
+
+- prediction trees: 2416
+- yield mismatches: 0
+- original EVALB error sentences: 0
+- Stanza F1: 92.8478 on N=2416
+- original EVALB F1: 93.12 on N=2416
+
+The remaining decoder issue is one sentence that repeatedly predicts unary
+`FRAG` reductions until the transition cap. It is now isolated to that sentence
+and counted through the valid-yield fallback instead of corrupting other
+predictions.
+
+## Original EVALB
+
+`COLLINS.prm` contains `MAX_ERROR 10`. EVALB processes options in order, so
+`-e 10000 -p COLLINS.prm` silently resets the limit back to 10. The correct
+order is:
+
+```bash
+evalb -p COLLINS.prm -e 10000 GOLD PRED
+```
+
+The repository wrapper `experiments/scripts/run_evalb_official.sh` uses this
+order and fails if EVALB writes any token/yield errors.
+
+## Punctuation Audit
+
+All current Arity and Delimiter dev/test predictions for PTB and CTB preserve
+the gold yield exactly. The punctuation problem is isolated to the binary PTB
+data and the old corrupted Arity output.
+
+The supplied PTB binary files change tokenization, for example:
+
+- `500 - stock` becomes `500-stock`
+- `Capital Cities / ABC` becomes `Capital Cities\\/ABC`
+- `finger - pointing` becomes `finger-pointing`
+
+This cannot be repaired reliably by EVALB or by structural debinarization.
+Binary PTB test input must be generated with the same transformation and must
+retain a reversible token map back to the original PTB test yield.
 
 ## Diagnostic Scripts
 

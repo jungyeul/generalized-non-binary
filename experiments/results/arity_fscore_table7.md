@@ -1,10 +1,10 @@
 # Table 7: Constituent F-score By Reduction Arity
 
-Computed on the test set. Constituents are matched by sentence id, span, and label after filtering both gold and predicted constituents by arity bucket. Root/TOP nodes and preterminals are excluded. PTB arity uses the valid-yield fallback prediction file.
+Computed on the test set. Constituents are matched by sentence id, span, and label after filtering both gold and predicted constituents by arity bucket. Root/TOP nodes and preterminals are excluded. All prediction yields are validated against gold.
 
 | Corpus | System | k=1 | k=2 | k=3 | k=4 | k>=5 |
 | ------ | ------ | --: | --: | --: | --: | ---: |
-| PTB | A | 92.68 | 90.17 | 86.98 | 76.69 | 81.24 |
+| PTB | A | 93.06 | 90.48 | 87.23 | 77.27 | 81.68 |
 | PTB | D | 92.95 | 90.36 | 86.84 | 77.29 | 83.14 |
 | CTB | A | 93.18 | 88.34 | 82.31 | 69.21 | 76.82 |
 | CTB | D | 92.92 | 87.86 | 82.07 | 69.00 | 74.57 |
@@ -13,11 +13,11 @@ Computed on the test set. Constituents are matched by sentence id, span, and lab
 
 | Corpus | System | Bucket | Matched | Pred | Gold | Precision | Recall | F1 |
 | ------ | ------ | ------ | ------: | ---: | ---: | --------: | -----: | -: |
-| PTB | A | k=1 | 8257 | 8806 | 9012 | 93.77 | 91.62 | 92.68 |
-| PTB | A | k=2 | 21935 | 24215 | 24440 | 90.58 | 89.75 | 90.17 |
-| PTB | A | k=3 | 7149 | 8224 | 8214 | 86.93 | 87.03 | 86.98 |
-| PTB | A | k=4 | 1770 | 2274 | 2342 | 77.84 | 75.58 | 76.69 |
-| PTB | A | k>=5 | 1386 | 1718 | 1694 | 80.68 | 81.82 | 81.24 |
+| PTB | A | k=1 | 8323 | 8875 | 9012 | 93.78 | 92.35 | 93.06 |
+| PTB | A | k=2 | 22091 | 24389 | 24440 | 90.58 | 90.39 | 90.48 |
+| PTB | A | k=3 | 7186 | 8262 | 8214 | 86.98 | 87.48 | 87.23 |
+| PTB | A | k=4 | 1792 | 2296 | 2342 | 78.05 | 76.52 | 77.27 |
+| PTB | A | k>=5 | 1389 | 1707 | 1694 | 81.37 | 82.00 | 81.68 |
 | PTB | D | k=1 | 8325 | 8901 | 9012 | 93.53 | 92.38 | 92.95 |
 | PTB | D | k=2 | 22019 | 24296 | 24440 | 90.63 | 90.09 | 90.36 |
 | PTB | D | k=3 | 7145 | 8242 | 8214 | 86.69 | 86.99 | 86.84 |

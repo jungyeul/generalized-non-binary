@@ -31,7 +31,7 @@ DATA = {
         "gold_train": ROOT / "base_dir/data/constituency/en_ptb_train.mrg",
         "gold_dev": ROOT / "base_dir/data/constituency/en_ptb_dev.mrg",
         "gold_test": ROOT / "base_dir/data/constituency/en_ptb_test.mrg",
-        "arity_pred_test": ROOT / "bottomup_runs/predictions/arity_test.validyield_fallback.pred.mrg",
+        "arity_pred_test": ROOT / "bottomup_runs/predictions/arity_test.pred.mrg",
         "delimiter_pred_test": ROOT / "bottomup_runs/predictions/delimiter_test.pred.mrg",
     },
     "CTB": {
@@ -305,7 +305,7 @@ def main():
 
     lines = []
     lines.append("# Bottom-up Tables 2-6\n")
-    lines.append("Table 2 and Table 4 use training gold oracle sequences. Table 5 and Table 6 use test gold/predicted trees. Root/TOP nodes and preterminals are excluded from Table 5 subtree arity counts. PTB arity predictions use the conservative valid-yield fallback file for the 24 invalid ROOT/yield cases found during audit.\n")
+    lines.append("Table 2 and Table 4 use training gold oracle sequences. Table 5 and Table 6 use test gold/predicted trees. Root/TOP nodes and preterminals are excluded from Table 5 subtree arity counts. Prediction yields are validated against gold before evaluation.\n")
 
     rows = []
     for system in SCHEMES:

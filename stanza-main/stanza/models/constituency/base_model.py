@@ -326,7 +326,8 @@ class BaseModel(ABC):
                     else:
                         fallback_children = [word for word in state.all_words(self) if word is not None]
                     fallback_label = self.root_labels[0] if self.root_labels else "ROOT"
-                    fallback_tree = Tree(fallback_label, fallback_children)
+                    # Keep ROOT unary, as required by the tree reader and evaluators.
+                    fallback_tree = Tree(fallback_label, [Tree("X", fallback_children)])
                     treebank.append(ParseResult(gold_tree, [ScoredTree(fallback_tree, state.score)], state if keep_state else None, constituents[batch_indices[idx]] if keep_constituents else None))
                     treebank_indices.append(batch_indices[idx])
                     remove.add(idx)
@@ -356,6 +357,10 @@ class BaseModel(ABC):
                 batch_indices.append(next_batch_index)
                 next_batch_index += 1
 
+        expected_indices = list(range(next_batch_index))
+        if sorted(treebank_indices) != expected_indices:
+            raise RuntimeError("Parse result indices are incomplete or duplicated: expected %d unique results, found %d" %
+                               (next_batch_index, len(set(treebank_indices))))
         treebank = utils.unsort(treebank, treebank_indices)
         return treebank
 
@@ -465,15 +470,16 @@ class BaseModel(ABC):
             for idx, constituent in zip(idxs, callback_constituents):
                 new_constituents[idx] = constituent
 
+        valid_states = [state for state in state_batch if not state.broken]
         transitions = [trans for state, trans in zip(state_batch, transitions) if not state.broken]
         if len(transitions) > 0:
-            new_transitions = self.push_transitions([state.transitions for state in state_batch if not state.broken], transitions)
+            new_transitions = self.push_transitions([state.transitions for state in valid_states], transitions)
             new_constituents = self.push_constituents(constituents, new_constituents)
         else:
             new_transitions = []
             new_constituents = []
 
-        for state, transition, word_position, transition_stack, constituents, state_idx in zip(state_batch, transitions, word_positions, new_transitions, new_constituents, valid_state_indices):
+        for state, transition, word_position, transition_stack, constituents, state_idx in zip(valid_states, transitions, word_positions, new_transitions, new_constituents, valid_state_indices):
             state_batch[state_idx] = state._replace(num_opens=state.num_opens + transition.delta_opens(),
                                                     word_position=word_position,
                                                     transitions=transition_stack,

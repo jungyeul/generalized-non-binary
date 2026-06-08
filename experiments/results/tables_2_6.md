@@ -1,6 +1,6 @@
 # Bottom-up Tables 2-6
 
-Table 2 and Table 4 use training gold oracle sequences. Table 5 and Table 6 use test gold/predicted trees. Root/TOP nodes and preterminals are excluded from Table 5 subtree arity counts. PTB arity predictions use the conservative valid-yield fallback file for the 24 invalid ROOT/yield cases found during audit.
+Table 2 and Table 4 use training gold oracle sequences. Table 5 and Table 6 use test gold/predicted trees. Root/TOP nodes and preterminals are excluded from Table 5 subtree arity counts. Prediction yields are validated against gold before evaluation.
 
 ## Table 2: Average transition sequence length per sentence
 | System                     | PTB   | CTB   |
@@ -9,20 +9,18 @@ Table 2 and Table 4 use training gold oracle sequences. Table 5 and Table 6 use 
 | Arity-specific bottom-up   | 44.70 | 59.45 |
 | Delimiter-guided bottom-up | 58.31 | 77.56 |
 
-## Table 4: Action inventory size
-| System                     | PTB | CTB |
-| -------------------------- | --- | --- |
-| Binary bottom-up           | 126 | 148 |
-| Arity-specific bottom-up   | 205 | 190 |
-| Delimiter-guided bottom-up | 81  | 64  |
-
-Table 4 follows the action inventory definition in the paper draft. Binary and arity-specific systems count the distinct gold reduction actions plus SHIFT and FINISH. The delimiter-guided system counts distinct NT(X) actions observed in gold plus SHIFT, D-SHIFT, U-REDUCE, REDUCE, D-REDUCE, and FINISH. The earlier diagnostic counts 125/147, 204/189, and 54/50 were implementation-level Stanza action repr counts and should not be used as the paper Table 4.
+## Table 4: Action inventory size used in gold oracle sequences
+| System                     | PTB full | CTB full | PTB reductions | CTB reductions |
+| -------------------------- | -------- | -------- | -------------- | -------------- |
+| Binary bottom-up           | 125      | 147      | 124            | 146            |
+| Arity-specific bottom-up   | 204      | 189      | 203            | 188            |
+| Delimiter-guided bottom-up | 54       | 50       | 52             | 48             |
 
 ## Table 5: PTB subtree arity distribution
 | Source | k=1  | k=2   | k=3  | k=4  | k>=5 |
 | ------ | ---- | ----- | ---- | ---- | ---- |
 | G      | 9012 | 24440 | 8214 | 2342 | 1694 |
-| A      | 8806 | 24215 | 8224 | 2274 | 1718 |
+| A      | 8875 | 24389 | 8262 | 2296 | 1707 |
 | D      | 8901 | 24296 | 8242 | 2357 | 1705 |
 
 ## Table 5: CTB subtree arity distribution

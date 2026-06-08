@@ -11,7 +11,7 @@ For Delimiter, the counts follow the paper-level oracle abstraction: `SHIFT`, `D
 | Corpus | Split | Binary | Arity | Delimiter |
 | ------ | ----- | -----: | ----: | --------: |
 | PTB    | dev   | 53     | 108   | 77        |
-| PTB    | test  | 55     | 119   | 77        |
+| PTB    | test  | 55     | 117   | 77        |
 | CTB    | dev   | 39     | 73    | 58        |
 | CTB    | test  | 45     | 65    | 54        |
 
@@ -20,7 +20,7 @@ For Delimiter, the counts follow the paper-level oracle abstraction: `SHIFT`, `D
 | Corpus | Split | Binary | Arity | Delimiter |
 | ------ | ----- | -----: | ----: | --------: |
 | PTB    | dev   | 48.20  | 44.92 | 113.12    |
-| PTB    | test  | 47.92  | 44.83 | 112.98    |
+| PTB    | test  | 47.92  | 44.95 | 112.98    |
 | CTB    | dev   | 39.76  | 42.23 | 102.86    |
 | CTB    | test  | 47.02  | 49.89 | 122.22    |
 
@@ -32,7 +32,7 @@ For Delimiter, the counts follow the paper-level oracle abstraction: `SHIFT`, `D
 | PTB | dev | Arity | SHIFT=41219, REDUCE-ARITY=33443, FINISH=1700 |
 | PTB | dev | Delimiter | D-SHIFT=22424, NT(X)=74689, U-REDUCE=41219, SHIFT=18795, D-REDUCE=11046, REDUCE=22424, FINISH=1700 |
 | PTB | test | Binary | SHIFT=56684, REDUCE-BINARY=54268, REDUCE-UNARY=2416, FINISH=2416 |
-| PTB | test | Arity | SHIFT=58236, REDUCE-ARITY=47653, FINISH=2416 |
+| PTB | test | Arity | SHIFT=58236, REDUCE-ARITY=47945, FINISH=2416 |
 | PTB | test | Delimiter | D-SHIFT=32272, NT(X)=106153, U-REDUCE=58236, D-REDUCE=15645, SHIFT=25964, REDUCE=32272, FINISH=2416 |
 | CTB | dev | Binary | SHIFT=6821, REDUCE-BINARY=6469, REDUCE-UNARY=352, FINISH=352 |
 | CTB | dev | Arity | SHIFT=6821, REDUCE-ARITY=7691, FINISH=352 |

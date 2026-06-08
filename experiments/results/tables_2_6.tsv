@@ -5,22 +5,28 @@ table	corpus	system_or_source	metric	value
 2	CTB	Arity-specific bottom-up	avg_transition_length	59.445280
 2	PTB	Delimiter-guided bottom-up	avg_transition_length	58.309934
 2	CTB	Delimiter-guided bottom-up	avg_transition_length	77.560933
-4	PTB	Binary bottom-up	action_inventory_size	126
-4	CTB	Binary bottom-up	action_inventory_size	148
-4	PTB	Arity-specific bottom-up	action_inventory_size	205
-4	CTB	Arity-specific bottom-up	action_inventory_size	190
-4	PTB	Delimiter-guided bottom-up	action_inventory_size	81
-4	CTB	Delimiter-guided bottom-up	action_inventory_size	64
+4	PTB	Binary bottom-up	full_inventory_size	125
+4	PTB	Binary bottom-up	reduction_inventory_size	124
+4	CTB	Binary bottom-up	full_inventory_size	147
+4	CTB	Binary bottom-up	reduction_inventory_size	146
+4	PTB	Arity-specific bottom-up	full_inventory_size	204
+4	PTB	Arity-specific bottom-up	reduction_inventory_size	203
+4	CTB	Arity-specific bottom-up	full_inventory_size	189
+4	CTB	Arity-specific bottom-up	reduction_inventory_size	188
+4	PTB	Delimiter-guided bottom-up	full_inventory_size	54
+4	PTB	Delimiter-guided bottom-up	reduction_inventory_size	52
+4	CTB	Delimiter-guided bottom-up	full_inventory_size	50
+4	CTB	Delimiter-guided bottom-up	reduction_inventory_size	48
 5	PTB	G	k=1	9012
 5	PTB	G	k=2	24440
 5	PTB	G	k=3	8214
 5	PTB	G	k=4	2342
 5	PTB	G	k>=5	1694
-5	PTB	A	k=1	8806
-5	PTB	A	k=2	24215
-5	PTB	A	k=3	8224
-5	PTB	A	k=4	2274
-5	PTB	A	k>=5	1718
+5	PTB	A	k=1	8875
+5	PTB	A	k=2	24389
+5	PTB	A	k=3	8262
+5	PTB	A	k=4	2296
+5	PTB	A	k>=5	1707
 5	PTB	D	k=1	8901
 5	PTB	D	k=2	24296
 5	PTB	D	k=3	8242

@@ -16,26 +16,62 @@
   "table4": {
     "Arity-specific bottom-up": {
       "CTB": {
-        "action_inventory_size": 190
+        "full_inventory_size": 189,
+        "kind_counts": {
+          "REDUCE-ARITY": 563552,
+          "SHIFT": 479356
+        },
+        "reduction_inventory_size": 188
       },
       "PTB": {
-        "action_inventory_size": 205
+        "full_inventory_size": 204,
+        "kind_counts": {
+          "REDUCE-ARITY": 805973,
+          "SHIFT": 974327
+        },
+        "reduction_inventory_size": 203
       }
     },
     "Binary bottom-up": {
       "CTB": {
-        "action_inventory_size": 148
+        "full_inventory_size": 147,
+        "kind_counts": {
+          "REDUCE-RIGHT": 461643,
+          "REDUCE-UNARY": 17541,
+          "SHIFT": 479184
+        },
+        "reduction_inventory_size": 146
       },
       "PTB": {
-        "action_inventory_size": 126
+        "full_inventory_size": 125,
+        "kind_counts": {
+          "REDUCE-RIGHT": 910196,
+          "REDUCE-UNARY": 39832,
+          "SHIFT": 950028
+        },
+        "reduction_inventory_size": 124
       }
     },
     "Delimiter-guided bottom-up": {
       "CTB": {
-        "action_inventory_size": 64
+        "full_inventory_size": 50,
+        "kind_counts": {
+          "D-REDUCE": 245731,
+          "D-SHIFT": 317821,
+          "REDUCE": 317821,
+          "SHIFT": 479356
+        },
+        "reduction_inventory_size": 48
       },
       "PTB": {
-        "action_inventory_size": 81
+        "full_inventory_size": 54,
+        "kind_counts": {
+          "D-REDUCE": 263730,
+          "D-SHIFT": 542243,
+          "REDUCE": 542243,
+          "SHIFT": 974327
+        },
+        "reduction_inventory_size": 52
       }
     }
   },
@@ -65,11 +101,11 @@
     },
     "PTB": {
       "A": {
-        "k=1": 8806,
-        "k=2": 24215,
-        "k=3": 8224,
-        "k=4": 2274,
-        "k>=5": 1718
+        "k=1": 8875,
+        "k=2": 24389,
+        "k=3": 8262,
+        "k=4": 2296,
+        "k>=5": 1707
       },
       "D": {
         "k=1": 8901,

@@ -12,7 +12,7 @@ BUCKETS = ["k=1", "k=2", "k=3", "k=4", "k>=5"]
 DATA = {
     "PTB": {
         "gold": ROOT / "base_dir/data/constituency/en_ptb_test.mrg",
-        "A": ROOT / "bottomup_runs/predictions/arity_test.validyield_fallback.pred.mrg",
+        "A": ROOT / "bottomup_runs/predictions/arity_test.pred.mrg",
         "D": ROOT / "bottomup_runs/predictions/delimiter_test.pred.mrg",
     },
     "CTB": {
