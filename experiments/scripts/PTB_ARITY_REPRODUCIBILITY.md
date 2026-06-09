@@ -17,6 +17,7 @@ For another installation location:
 ROOT="$HOME/ziho_ptb_arity" \
 PY="$HOME/venvs/ziho/bin/python" \
 RESOURCE_ROOT="$HOME/stanza_resources" \
+CORENLP_HOME="$HOME/stanford-corenlp-4.5.10" \
 DEVICE=cuda \
 "$HOME/ziho_ptb_arity/run_ptb_no_nml_arity.sh" all
 ```

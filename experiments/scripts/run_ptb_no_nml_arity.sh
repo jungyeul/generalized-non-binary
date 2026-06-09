@@ -5,6 +5,7 @@ ROOT=${ROOT:-/home/zihopc/vscode/Jungyeul/20251116_stanza}
 PY=${PY:-$ROOT/.venv/bin/python}
 RESOURCE_ROOT=${RESOURCE_ROOT:-$HOME/stanza_resources}
 IMPLEMENTATION_ROOT=${IMPLEMENTATION_ROOT:-$ROOT}
+export CORENLP_HOME=${CORENLP_HOME:-$HOME/stanford-corenlp-4.5.10}
 SOURCE_DIR=$ROOT/data
 DATA_DIR=$ROOT/data/ptb_no_nml
 RUN_DIR=${RUN_DIR:-$ROOT/bottomup_runs_ptb_no_nml_arity}
@@ -45,7 +46,14 @@ prepare_data() {
     date --iso-8601=seconds
     uname -a
     "$PY" -c 'import platform, stanza, sys, torch; print("python", sys.version.replace("\n", " ")); print("torch", torch.__version__); print("stanza", stanza.__version__); print("platform", platform.platform()); print("cuda_available", torch.cuda.is_available())'
-    git -C "$IMPLEMENTATION_ROOT" rev-parse HEAD 2>/dev/null || echo "git_commit unavailable"
+    if git -C "$IMPLEMENTATION_ROOT" rev-parse HEAD 2>/dev/null; then
+      :
+    elif [[ -f "$ROOT/IMPLEMENTATION_COMMIT.txt" ]]; then
+      printf "git_commit "
+      cat "$ROOT/IMPLEMENTATION_COMMIT.txt"
+    else
+      echo "git_commit unavailable"
+    fi
     sha256sum \
       "$SOURCE_DIR/train.txt" \
       "$SOURCE_DIR/dev.txt" \
