@@ -3,6 +3,8 @@ set -euo pipefail
 
 ROOT=${ROOT:-/home/zihopc/vscode/Jungyeul/20251116_stanza}
 PY=${PY:-$ROOT/.venv/bin/python}
+RESOURCE_ROOT=${RESOURCE_ROOT:-$HOME/stanza_resources}
+IMPLEMENTATION_ROOT=${IMPLEMENTATION_ROOT:-$ROOT}
 SOURCE_DIR=$ROOT/data
 DATA_DIR=$ROOT/data/ptb_no_nml
 RUN_DIR=${RUN_DIR:-$ROOT/bottomup_runs_ptb_no_nml_arity}
@@ -43,7 +45,7 @@ prepare_data() {
     date --iso-8601=seconds
     uname -a
     "$PY" -c 'import platform, stanza, sys, torch; print("python", sys.version.replace("\n", " ")); print("torch", torch.__version__); print("stanza", stanza.__version__); print("platform", platform.platform()); print("cuda_available", torch.cuda.is_available())'
-    git -C "$ROOT/../generalized-non-binary" rev-parse HEAD
+    git -C "$IMPLEMENTATION_ROOT" rev-parse HEAD 2>/dev/null || echo "git_commit unavailable"
     sha256sum \
       "$SOURCE_DIR/train.txt" \
       "$SOURCE_DIR/dev.txt" \
@@ -61,9 +63,9 @@ train() {
     --mode train \
     --transition_scheme BOTTOM_UP_ARITY \
     --shorthand en_ptb \
-    --wordvec_pretrain_file /home/zihopc/stanza_resources/en/pretrain/conll17.pt \
-    --charlm_forward_file /home/zihopc/stanza_resources/en/forward_charlm/1billion.pt \
-    --charlm_backward_file /home/zihopc/stanza_resources/en/backward_charlm/1billion.pt \
+    --wordvec_pretrain_file "$RESOURCE_ROOT/en/pretrain/conll17.pt" \
+    --charlm_forward_file "$RESOURCE_ROOT/en/forward_charlm/1billion.pt" \
+    --charlm_backward_file "$RESOURCE_ROOT/en/backward_charlm/1billion.pt" \
     --epochs "${EPOCHS:-100}" \
     --epoch_size "${EPOCH_SIZE:-5000}" \
     --train_batch_size "${TRAIN_BATCH_SIZE:-16}" \

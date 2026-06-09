@@ -11,6 +11,16 @@ cd /home/zihopc/vscode/Jungyeul/20251116_stanza
 DEVICE=cuda ./run_ptb_no_nml_arity.sh all
 ```
 
+For another installation location:
+
+```bash
+ROOT="$HOME/ziho_ptb_arity" \
+PY="$HOME/venvs/ziho/bin/python" \
+RESOURCE_ROOT="$HOME/stanza_resources" \
+DEVICE=cuda \
+"$HOME/ziho_ptb_arity/run_ptb_no_nml_arity.sh" all
+```
+
 The random seed is fixed to `1234`. To resume after interruption, run the same
 command. Stanza will load `arity_checkpoint.pt` when it is present.
 
