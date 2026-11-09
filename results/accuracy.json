@@ -1,0 +1,1494 @@
+{
+  "metadata": {
+    "seeds": [
+      1111,
+      2222,
+      3333
+    ],
+    "split": "test",
+    "standard_deviation": "sample (ddof=1)",
+    "scale": "0-100",
+    "input_normalization": "none; exact saved trees including ROOT",
+    "evalb_parameters": "alignment-based-PARSEVAL/case1_ptb23_dir/COLLINS.prm",
+    "jp_evalb_mode": "default alignment; no -evalb option",
+    "f1_calculation": "200 * corpus matched / (corpus gold + corpus predicted), before rounding",
+    "repositories": {
+      "EVALB": "00c15be0abea14f2bff03ef2007f2e0cf6f2f5a3",
+      "alignment-based-PARSEVAL": "f82c4fc0e08fc5f597f379aeedcaee377b57495e"
+    },
+    "scorer_sha256": {
+      "EVALB/evalb.c": "846bce901f562d60a49a25cac019a8853e420fb1b29c96f2ab2129d6d5cbe796",
+      "EVALB/evalb": "3a4132d0ead53493d1556df1c514a815395f03655695268138f35a5a55616a10",
+      "alignment-based-PARSEVAL/jp-evalb.py": "839af0f23d90c0e71265ad6a1316df423a849ec4170afede5618f96d0eaaa748",
+      "alignment-based-PARSEVAL/case1_ptb23_dir/COLLINS.prm": "cb1034cb11ab0f541a289ea16d773a25af99467591b33d3f789e242a9e980933"
+    }
+  },
+  "runs": [
+    {
+      "family": "canonical",
+      "system": "td",
+      "dataset": "ctb",
+      "seed": 1111,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "a0526491cef5da1e7e9f06e4a40218f7c3cc29d22fc0a2808c490ef8bae9bc2a",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 89.87531172069825,
+          "displayed_f1_percent": 89.88,
+          "matched_brackets": 8109,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8977,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.15738431698531,
+          "displayed_f1_percent": 88.16,
+          "matched_brackets": 7954,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8977,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "td",
+      "dataset": "ctb",
+      "seed": 2222,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "580101adc57bd85692acceb0bbeaaee927d67772bbfbd9bae54d965fcdb3ca0c",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.08769008769009,
+          "displayed_f1_percent": 90.09,
+          "matched_brackets": 8116,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8950,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.36718836718836,
+          "displayed_f1_percent": 88.37,
+          "matched_brackets": 7961,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8950,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "td",
+      "dataset": "ctb",
+      "seed": 3333,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "0e50fe78feee03b1b24c1f25c5dde28cc8aec6c677d95fb137cc97f0bdf7f842",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 89.5235982474627,
+          "displayed_f1_percent": 89.52,
+          "matched_brackets": 8071,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8963,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 87.74887693416893,
+          "displayed_f1_percent": 87.75,
+          "matched_brackets": 7911,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8963,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "td",
+      "dataset": "ptb",
+      "seed": 1111,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "1246bfe32561acb4c6f026f3c28b70f8403d290e96600601a49379ad1c2d6804",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.90979381443299,
+          "displayed_f1_percent": 94.91,
+          "matched_brackets": 44190,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46428,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.29982817869416,
+          "displayed_f1_percent": 94.3,
+          "matched_brackets": 43906,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46428,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "td",
+      "dataset": "ptb",
+      "seed": 2222,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "c4d93ac41eb92fccc95608f9aac43841135b545474ee88e723563a1f29ef3027",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.78626142821844,
+          "displayed_f1_percent": 94.79,
+          "matched_brackets": 44114,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46389,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.17174289060065,
+          "displayed_f1_percent": 94.17,
+          "matched_brackets": 43828,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46389,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "td",
+      "dataset": "ptb",
+      "seed": 3333,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "87c09281568b09fdcf20b6b8632502fa9003570c44816401389ab3027e912b4b",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.89779459994193,
+          "displayed_f1_percent": 94.9,
+          "matched_brackets": 44127,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46307,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.34294992419274,
+          "displayed_f1_percent": 94.34,
+          "matched_brackets": 43869,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46307,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "io",
+      "dataset": "ctb",
+      "seed": 1111,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "bdec717e9293ebeec75b6382c6b34ea71254b87515a9a6449fe04298671a41a0",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.80612924716856,
+          "displayed_f1_percent": 90.81,
+          "matched_brackets": 8178,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8944,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 89.08505440817233,
+          "displayed_f1_percent": 89.09,
+          "matched_brackets": 8023,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8944,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "io",
+      "dataset": "ctb",
+      "seed": 2222,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "83da98e41c73dd7d66b1b22fe9889424a307100a3f8ecd492376f13959d09f57",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.62655532820881,
+          "displayed_f1_percent": 90.63,
+          "matched_brackets": 8194,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9015,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.91223801360394,
+          "displayed_f1_percent": 88.91,
+          "matched_brackets": 8039,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9015,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "io",
+      "dataset": "ctb",
+      "seed": 3333,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "f817d090992dc427419e0b4bcb764f73a536489b2e4a2ebd25874cfa24930c16",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.43535984953256,
+          "displayed_f1_percent": 90.44,
+          "matched_brackets": 8174,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9009,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.68728218177795,
+          "displayed_f1_percent": 88.69,
+          "matched_brackets": 8016,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9009,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "io",
+      "dataset": "ptb",
+      "seed": 1111,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "2dd7ae7ebd3ef6dc22ad882a77bcc20b5ddce3a316f8d2b0204d1ccdc37de0a0",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 95.12402109808893,
+          "displayed_f1_percent": 95.12,
+          "matched_brackets": 44275,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46397,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.43650699867868,
+          "displayed_f1_percent": 94.44,
+          "matched_brackets": 43955,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46397,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "io",
+      "dataset": "ptb",
+      "seed": 2222,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "f1c93ae95b05b5ac0cc6da8bb6bc6879b58845734d67ac31984dcb182d5d842f",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.99693558272314,
+          "displayed_f1_percent": 95.0,
+          "matched_brackets": 44175,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46311,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.33889229379697,
+          "displayed_f1_percent": 94.34,
+          "matched_brackets": 43869,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46311,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "io",
+      "dataset": "ptb",
+      "seed": 3333,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "d524813c35a9eeabff6b518f37158679afc7b929efb9307a80aa64f04fa93949",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 95.00461541764163,
+          "displayed_f1_percent": 95.0,
+          "matched_brackets": 44256,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46474,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.27688212438014,
+          "displayed_f1_percent": 94.28,
+          "matched_brackets": 43917,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46474,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "bu",
+      "dataset": "ctb",
+      "seed": 1111,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "02d78d168550964b16bcc9166ad1b29dda99c2387725732f831162fa8b129c3b",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.6187624750499,
+          "displayed_f1_percent": 90.62,
+          "matched_brackets": 8172,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8968,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.87779995564426,
+          "displayed_f1_percent": 88.88,
+          "matched_brackets": 8015,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8968,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "bu",
+      "dataset": "ctb",
+      "seed": 2222,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "6330654ed905d4940abcc8d056cd7935da8847b291730010a669c04bbc3c2c71",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.91009743135518,
+          "displayed_f1_percent": 90.91,
+          "matched_brackets": 8211,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8996,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 89.14968999114261,
+          "displayed_f1_percent": 89.15,
+          "matched_brackets": 8052,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8996,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "bu",
+      "dataset": "ctb",
+      "seed": 3333,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "e09e5038740f76bba53909d6dc6a240ed0b92a48cb41597a68188b301cdd3c26",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.37004259085127,
+          "displayed_f1_percent": 90.37,
+          "matched_brackets": 8169,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9011,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.63322086398584,
+          "displayed_f1_percent": 88.63,
+          "matched_brackets": 8012,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9011,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "bu",
+      "dataset": "ptb",
+      "seed": 1111,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "a0692bcc59c80b61ca97cab31264cdfc9be054322262e3359b432d66e5da5a66",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.90153125872475,
+          "displayed_f1_percent": 94.9,
+          "matched_brackets": 44189,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46434,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.27442389880378,
+          "displayed_f1_percent": 94.27,
+          "matched_brackets": 43897,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46434,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "bu",
+      "dataset": "ptb",
+      "seed": 2222,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "3273751f9ee8d2cec765048983b32f267160fe2a515d43096cacd9205fd47ca6",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.85982812449708,
+          "displayed_f1_percent": 94.86,
+          "matched_brackets": 44208,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46515,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.17747594064824,
+          "displayed_f1_percent": 94.18,
+          "matched_brackets": 43890,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46515,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "canonical",
+      "system": "bu",
+      "dataset": "ptb",
+      "seed": 3333,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "04da5dda94c9e951ecd68efbbbd3179e93634a933bf538a81c419e8742cc22c3",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.94023989871897,
+          "displayed_f1_percent": 94.94,
+          "matched_brackets": 44245,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46514,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.36516962427312,
+          "displayed_f1_percent": 94.37,
+          "matched_brackets": 43977,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46514,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "td",
+      "dataset": "ctb",
+      "seed": 1111,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "61b61d6af9efcb78962e4693de2042260090871eca4d16bd6581d2091cc93012",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 89.53868305920142,
+          "displayed_f1_percent": 89.54,
+          "matched_brackets": 8084,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8989,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 87.82189732513707,
+          "displayed_f1_percent": 87.82,
+          "matched_brackets": 7929,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8989,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "td",
+      "dataset": "ctb",
+      "seed": 2222,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "f59b0363fe383c35f72a541a2e1a8ee96ec9ac5d4eebc59873feda08b07172d6",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 89.97728406005874,
+          "displayed_f1_percent": 89.98,
+          "matched_brackets": 8120,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8981,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.2708183278852,
+          "displayed_f1_percent": 88.27,
+          "matched_brackets": 7966,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8981,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "td",
+      "dataset": "ctb",
+      "seed": 3333,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "31191ae140a5d640ea4d6279cb560eb3b06f02a00dc52ac3bf6b0b65096ebf58",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.19150707743547,
+          "displayed_f1_percent": 90.19,
+          "matched_brackets": 8124,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8947,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.50402442409103,
+          "displayed_f1_percent": 88.5,
+          "matched_brackets": 7972,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8947,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "td",
+      "dataset": "ptb",
+      "seed": 1111,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "92362c410212ff35d7c2213b56ba18c46d72b1a3a79785f620e2ce06c6c366f6",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.91485335856197,
+          "displayed_f1_percent": 94.91,
+          "matched_brackets": 44143,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46324,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.20529801324503,
+          "displayed_f1_percent": 94.21,
+          "matched_brackets": 43813,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46324,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "td",
+      "dataset": "ptb",
+      "seed": 2222,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "b9e3d87229a3b808280e6b539fb80e29851758d40b900a9d0b1c2c99a472e343",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.97560870779877,
+          "displayed_f1_percent": 94.98,
+          "matched_brackets": 44195,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46374,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.3781832248082,
+          "displayed_f1_percent": 94.38,
+          "matched_brackets": 43917,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46374,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "td",
+      "dataset": "ptb",
+      "seed": 3333,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "71cc9b7a2156fce8a843f680a4e55749d8deefbc11058ab5dad3a8130518d0e1",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.77622370104389,
+          "displayed_f1_percent": 94.78,
+          "matched_brackets": 44079,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46325,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.17418321382112,
+          "displayed_f1_percent": 94.17,
+          "matched_brackets": 43799,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46325,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "io",
+      "dataset": "ctb",
+      "seed": 1111,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "5dcb5823dce2eaff9d17ca11cf3563086de25924672a7dc39e1bc73faac46dd4",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.91512670133893,
+          "displayed_f1_percent": 90.92,
+          "matched_brackets": 8216,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9006,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 89.13356202279518,
+          "displayed_f1_percent": 89.13,
+          "matched_brackets": 8055,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9006,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "io",
+      "dataset": "ctb",
+      "seed": 2222,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "c90982d9fad5868284cc7b50170e06637d567080209df97a7421e5b7fbfacc29",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.23379207428287,
+          "displayed_f1_percent": 90.23,
+          "matched_brackets": 8163,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9025,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.52042226275356,
+          "displayed_f1_percent": 88.52,
+          "matched_brackets": 8008,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9025,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "io",
+      "dataset": "ctb",
+      "seed": 3333,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "ce7b0ce954ebe16401c66a9512aca7e0dd86b0d2bbecaafe8ff9b4aa759daa50",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.29432958261737,
+          "displayed_f1_percent": 90.29,
+          "matched_brackets": 8145,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8973,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.56493542486558,
+          "displayed_f1_percent": 88.56,
+          "matched_brackets": 7989,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8973,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "io",
+      "dataset": "ptb",
+      "seed": 1111,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "3a21f023ff4f958c5fe3cf4da043fdb14bb8c867ec6701c59210b8004f1b21d5",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.8767458325288,
+          "displayed_f1_percent": 94.88,
+          "matched_brackets": 44223,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46530,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.18377636180301,
+          "displayed_f1_percent": 94.18,
+          "matched_brackets": 43900,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46530,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "io",
+      "dataset": "ptb",
+      "seed": 2222,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "aa8e516102c2ec14a43aafaaa5251702a8e422b7c408575953c4ad62ed525033",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.78551962404241,
+          "displayed_f1_percent": 94.79,
+          "matched_brackets": 44171,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46510,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.13746486126907,
+          "displayed_f1_percent": 94.14,
+          "matched_brackets": 43869,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46510,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "io",
+      "dataset": "ptb",
+      "seed": 3333,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "71f2b67c3d81f4343c829c942fc2ab28987b39b5ebf7b64e1a48d0b39aadf544",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.86210966841936,
+          "displayed_f1_percent": 94.86,
+          "matched_brackets": 44201,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46498,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.21826376220625,
+          "displayed_f1_percent": 94.22,
+          "matched_brackets": 43901,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46498,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "bu",
+      "dataset": "ctb",
+      "seed": 1111,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "6fa7e8d8a0438351eec4ee495f09a55ccc53b34a5e90ffd9d726bd98fb715d20",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 91.32602193419741,
+          "displayed_f1_percent": 91.33,
+          "matched_brackets": 8244,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8986,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 89.57571729256675,
+          "displayed_f1_percent": 89.58,
+          "matched_brackets": 8086,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8986,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "bu",
+      "dataset": "ctb",
+      "seed": 2222,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "dbd39b5721dd3cf148ab23c4a5a12c9757f1fb04584989af4934f6557f5ff074",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.70012769973904,
+          "displayed_f1_percent": 90.7,
+          "matched_brackets": 8168,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8943,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 88.96785297873522,
+          "displayed_f1_percent": 88.97,
+          "matched_brackets": 8012,
+          "gold_brackets": 9068,
+          "predicted_brackets": 8943,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "bu",
+      "dataset": "ctb",
+      "seed": 3333,
+      "gold_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+      "predictions_sha256": "f194c0fff233f0dc279ad21beb25526dba78ed5e74fc993d2cf26de5bc60e789",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 90.80746029110631,
+          "displayed_f1_percent": 90.81,
+          "matched_brackets": 8204,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9001,
+          "sentences": 348
+        },
+        "jp_evalb": {
+          "f1_percent": 89.069677347944,
+          "displayed_f1_percent": 89.07,
+          "matched_brackets": 8047,
+          "gold_brackets": 9068,
+          "predicted_brackets": 9001,
+          "sentences": 348
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "bu",
+      "dataset": "ptb",
+      "seed": 1111,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "4a80df30e0b2573d3bba128624443da7a044c971aa02cd1f40287d199267fc32",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.92596333627044,
+          "displayed_f1_percent": 94.93,
+          "matched_brackets": 44170,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46370,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.17377662203693,
+          "displayed_f1_percent": 94.17,
+          "matched_brackets": 43820,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46370,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "bu",
+      "dataset": "ptb",
+      "seed": 2222,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "c21ec2496a3a458eea34319921261ef64a337f8c1a54fd30a0238899b3c2e48c",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.89421114810439,
+          "displayed_f1_percent": 94.89,
+          "matched_brackets": 44178,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46418,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.20040811942863,
+          "displayed_f1_percent": 94.2,
+          "matched_brackets": 43855,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46418,
+          "sentences": 2416
+        }
+      }
+    },
+    {
+      "family": "generalised",
+      "system": "bu",
+      "dataset": "ptb",
+      "seed": 3333,
+      "gold_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+      "predictions_sha256": "8ffd7305918a3d01d2be66a34e60ae0ee576f6dcadc41f46d5b8ca2225d090c0",
+      "gold_root_labels": [
+        "ROOT"
+      ],
+      "predicted_root_labels": [
+        "ROOT"
+      ],
+      "scores": {
+        "evalb": {
+          "f1_percent": 94.87930793916561,
+          "displayed_f1_percent": 94.88,
+          "matched_brackets": 44200,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46479,
+          "sentences": 2416
+        },
+        "jp_evalb": {
+          "f1_percent": 94.25250346137747,
+          "displayed_f1_percent": 94.25,
+          "matched_brackets": 43908,
+          "gold_brackets": 46692,
+          "predicted_brackets": 46479,
+          "sentences": 2416
+        }
+      }
+    }
+  ],
+  "summary": [
+    {
+      "family": "canonical",
+      "order": "td",
+      "corpus": "ptb",
+      "scorer": "evalb",
+      "mean": 94.86461661419779,
+      "sample_sd": 0.06812229197916206,
+      "seed_scores": [
+        94.90979381443299,
+        94.78626142821844,
+        94.89779459994193
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "td",
+      "corpus": "ptb",
+      "scorer": "jp_evalb",
+      "mean": 94.27150699782918,
+      "sample_sd": 0.08904790313106783,
+      "seed_scores": [
+        94.29982817869416,
+        94.17174289060065,
+        94.34294992419274
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "td",
+      "corpus": "ctb",
+      "scorer": "evalb",
+      "mean": 89.82886668528369,
+      "sample_sd": 0.28489955605226297,
+      "seed_scores": [
+        89.87531172069825,
+        90.08769008769009,
+        89.5235982474627
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "td",
+      "corpus": "ctb",
+      "scorer": "jp_evalb",
+      "mean": 88.09114987278087,
+      "sample_sd": 0.314432040749569,
+      "seed_scores": [
+        88.15738431698531,
+        88.36718836718836,
+        87.74887693416893
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "io",
+      "corpus": "ptb",
+      "scorer": "evalb",
+      "mean": 95.04185736615123,
+      "sample_sd": 0.07125941411870564,
+      "seed_scores": [
+        95.12402109808893,
+        94.99693558272314,
+        95.00461541764163
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "io",
+      "corpus": "ptb",
+      "scorer": "jp_evalb",
+      "mean": 94.35076047228526,
+      "sample_sd": 0.08047151899385836,
+      "seed_scores": [
+        94.43650699867868,
+        94.33889229379697,
+        94.27688212438014
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "io",
+      "corpus": "ctb",
+      "scorer": "evalb",
+      "mean": 90.62268147496998,
+      "sample_sd": 0.18541505227469235,
+      "seed_scores": [
+        90.80612924716856,
+        90.62655532820881,
+        90.43535984953256
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "io",
+      "corpus": "ctb",
+      "scorer": "jp_evalb",
+      "mean": 88.89485820118473,
+      "sample_sd": 0.19945483055689714,
+      "seed_scores": [
+        89.08505440817233,
+        88.91223801360394,
+        88.68728218177795
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "bu",
+      "corpus": "ptb",
+      "scorer": "evalb",
+      "mean": 94.90053309398027,
+      "sample_sd": 0.04021517882616895,
+      "seed_scores": [
+        94.90153125872475,
+        94.85982812449708,
+        94.94023989871897
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "bu",
+      "corpus": "ptb",
+      "scorer": "jp_evalb",
+      "mean": 94.27235648790838,
+      "sample_sd": 0.09386391936749444,
+      "seed_scores": [
+        94.27442389880378,
+        94.17747594064824,
+        94.36516962427312
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "bu",
+      "corpus": "ctb",
+      "scorer": "evalb",
+      "mean": 90.63296749908545,
+      "sample_sd": 0.27030750030070316,
+      "seed_scores": [
+        90.6187624750499,
+        90.91009743135518,
+        90.37004259085127
+      ]
+    },
+    {
+      "family": "canonical",
+      "order": "bu",
+      "corpus": "ctb",
+      "scorer": "jp_evalb",
+      "mean": 88.88690360359091,
+      "sample_sd": 0.2583548860210904,
+      "seed_scores": [
+        88.87779995564426,
+        89.14968999114261,
+        88.63322086398584
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "td",
+      "corpus": "ptb",
+      "scorer": "evalb",
+      "mean": 94.88889525580154,
+      "sample_sd": 0.10219570712046376,
+      "seed_scores": [
+        94.91485335856197,
+        94.97560870779877,
+        94.77622370104389
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "td",
+      "corpus": "ptb",
+      "scorer": "jp_evalb",
+      "mean": 94.25255481729145,
+      "sample_sd": 0.10990407302367343,
+      "seed_scores": [
+        94.20529801324503,
+        94.3781832248082,
+        94.17418321382112
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "td",
+      "corpus": "ctb",
+      "scorer": "evalb",
+      "mean": 89.90249139889855,
+      "sample_sd": 0.33277658619317346,
+      "seed_scores": [
+        89.53868305920142,
+        89.97728406005874,
+        90.19150707743547
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "td",
+      "corpus": "ctb",
+      "scorer": "jp_evalb",
+      "mean": 88.19891335903776,
+      "sample_sd": 0.3467017279889837,
+      "seed_scores": [
+        87.82189732513707,
+        88.2708183278852,
+        88.50402442409103
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "io",
+      "corpus": "ptb",
+      "scorer": "evalb",
+      "mean": 94.84145837499686,
+      "sample_sd": 0.04899400186469207,
+      "seed_scores": [
+        94.8767458325288,
+        94.78551962404241,
+        94.86210966841936
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "io",
+      "corpus": "ptb",
+      "scorer": "jp_evalb",
+      "mean": 94.17983499509278,
+      "sample_sd": 0.04054338881769224,
+      "seed_scores": [
+        94.18377636180301,
+        94.13746486126907,
+        94.21826376220625
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "io",
+      "corpus": "ctb",
+      "scorer": "evalb",
+      "mean": 90.48108278607972,
+      "sample_sd": 0.37710978210462154,
+      "seed_scores": [
+        90.91512670133893,
+        90.23379207428287,
+        90.29432958261737
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "io",
+      "corpus": "ctb",
+      "scorer": "jp_evalb",
+      "mean": 88.73963990347144,
+      "sample_sd": 0.34187180707054754,
+      "seed_scores": [
+        89.13356202279518,
+        88.52042226275356,
+        88.56493542486558
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "bu",
+      "corpus": "ptb",
+      "scorer": "evalb",
+      "mean": 94.89982747451349,
+      "sample_sd": 0.023829369725244704,
+      "seed_scores": [
+        94.92596333627044,
+        94.89421114810439,
+        94.87930793916561
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "bu",
+      "corpus": "ptb",
+      "scorer": "jp_evalb",
+      "mean": 94.20889606761435,
+      "sample_sd": 0.040043885381423415,
+      "seed_scores": [
+        94.17377662203693,
+        94.20040811942863,
+        94.25250346137747
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "bu",
+      "corpus": "ctb",
+      "scorer": "evalb",
+      "mean": 90.94453664168093,
+      "sample_sd": 0.33470635278882627,
+      "seed_scores": [
+        91.32602193419741,
+        90.70012769973904,
+        90.80746029110631
+      ]
+    },
+    {
+      "family": "generalised",
+      "order": "bu",
+      "corpus": "ctb",
+      "scorer": "jp_evalb",
+      "mean": 89.20441587308198,
+      "sample_sd": 0.32556198891261856,
+      "seed_scores": [
+        89.57571729256675,
+        88.96785297873522,
+        89.069677347944
+      ]
+    }
+  ]
+}

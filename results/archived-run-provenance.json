@@ -1,0 +1,2972 @@
+[
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_bu_ptb.py": "f2e085528020f9ed671f8a3bfef58c0d3dba6032067d458370ec1b83251c772f",
+      "stanza-main-constituency/scripts/run_canonical_bu_experiments.py": "d213c364561c337fe0fc646584768be88e134ae1ea40aabf5bdef4a0525aba76",
+      "stanza-main-constituency/scripts/run_canonical_bu_ctb.py": "26b97eba0584d8f0ee303dfd5178f44b9c8ad5a70a22e439fbdc4ace88b4e424"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_bu_ptb.py": "f2e085528020f9ed671f8a3bfef58c0d3dba6032067d458370ec1b83251c772f",
+      "stanza-main-constituency/scripts/run_canonical_bu_experiments.py": "d213c364561c337fe0fc646584768be88e134ae1ea40aabf5bdef4a0525aba76",
+      "stanza-main-constituency/scripts/run_canonical_bu_ctb.py": "26b97eba0584d8f0ee303dfd5178f44b9c8ad5a70a22e439fbdc4ace88b4e424"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_bu_ptb.py": "f2e085528020f9ed671f8a3bfef58c0d3dba6032067d458370ec1b83251c772f",
+      "stanza-main-constituency/scripts/run_canonical_bu_experiments.py": "d213c364561c337fe0fc646584768be88e134ae1ea40aabf5bdef4a0525aba76",
+      "stanza-main-constituency/scripts/run_canonical_bu_ctb.py": "26b97eba0584d8f0ee303dfd5178f44b9c8ad5a70a22e439fbdc4ace88b4e424"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_bu_ptb.py": "f2e085528020f9ed671f8a3bfef58c0d3dba6032067d458370ec1b83251c772f",
+      "stanza-main-constituency/scripts/run_canonical_bu_experiments.py": "d213c364561c337fe0fc646584768be88e134ae1ea40aabf5bdef4a0525aba76"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_bu_ptb.py": "f2e085528020f9ed671f8a3bfef58c0d3dba6032067d458370ec1b83251c772f",
+      "stanza-main-constituency/scripts/run_canonical_bu_experiments.py": "d213c364561c337fe0fc646584768be88e134ae1ea40aabf5bdef4a0525aba76"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_bu_ptb.py": "f2e085528020f9ed671f8a3bfef58c0d3dba6032067d458370ec1b83251c772f",
+      "stanza-main-constituency/scripts/run_canonical_bu_experiments.py": "d213c364561c337fe0fc646584768be88e134ae1ea40aabf5bdef4a0525aba76"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_io_ptb.py": "7e9ba0eb33d57ff5ad5c78e017ef860cf6a9ebb9ccbd7b66706f5b5340d6253d",
+      "stanza-main-constituency/scripts/run_canonical_io_experiments.py": "ada248f473f7b09828470a3c24d3960ce7cf9d880a18a268f1fbbd7b28b5b6ea",
+      "stanza-main-constituency/scripts/run_canonical_io_ctb.py": "2efa3ca4e20a3de0b86f935f0767e9e41bff6e064cfee295b2270738b64fd07e"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_io_ptb.py": "7e9ba0eb33d57ff5ad5c78e017ef860cf6a9ebb9ccbd7b66706f5b5340d6253d",
+      "stanza-main-constituency/scripts/run_canonical_io_experiments.py": "ada248f473f7b09828470a3c24d3960ce7cf9d880a18a268f1fbbd7b28b5b6ea",
+      "stanza-main-constituency/scripts/run_canonical_io_ctb.py": "2efa3ca4e20a3de0b86f935f0767e9e41bff6e064cfee295b2270738b64fd07e"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_io_ptb.py": "7e9ba0eb33d57ff5ad5c78e017ef860cf6a9ebb9ccbd7b66706f5b5340d6253d",
+      "stanza-main-constituency/scripts/run_canonical_io_experiments.py": "ada248f473f7b09828470a3c24d3960ce7cf9d880a18a268f1fbbd7b28b5b6ea",
+      "stanza-main-constituency/scripts/run_canonical_io_ctb.py": "2efa3ca4e20a3de0b86f935f0767e9e41bff6e064cfee295b2270738b64fd07e"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_io_ptb.py": "7e9ba0eb33d57ff5ad5c78e017ef860cf6a9ebb9ccbd7b66706f5b5340d6253d",
+      "stanza-main-constituency/scripts/run_canonical_io_experiments.py": "ada248f473f7b09828470a3c24d3960ce7cf9d880a18a268f1fbbd7b28b5b6ea"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_io_ptb.py": "7e9ba0eb33d57ff5ad5c78e017ef860cf6a9ebb9ccbd7b66706f5b5340d6253d",
+      "stanza-main-constituency/scripts/run_canonical_io_experiments.py": "ada248f473f7b09828470a3c24d3960ce7cf9d880a18a268f1fbbd7b28b5b6ea"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_io_ptb.py": "7e9ba0eb33d57ff5ad5c78e017ef860cf6a9ebb9ccbd7b66706f5b5340d6253d",
+      "stanza-main-constituency/scripts/run_canonical_io_experiments.py": "ada248f473f7b09828470a3c24d3960ce7cf9d880a18a268f1fbbd7b28b5b6ea"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_td_ptb.py": "a3c0a21b1143d109804d110b12990fe4c5048239affc2d8e51c1d0fab2d89d7f",
+      "stanza-main-constituency/scripts/run_canonical_td_experiments.py": "5065e375712d9440d07aa33e53829989f3a194559b2dd9454228246146e2d5ab",
+      "stanza-main-constituency/scripts/run_canonical_td_ctb.py": "77cf6ac2fa9b920eb07840ac80e6ac00f39827bdd131bee171941bd0714e0242"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_td_ptb.py": "a3c0a21b1143d109804d110b12990fe4c5048239affc2d8e51c1d0fab2d89d7f",
+      "stanza-main-constituency/scripts/run_canonical_td_experiments.py": "5065e375712d9440d07aa33e53829989f3a194559b2dd9454228246146e2d5ab",
+      "stanza-main-constituency/scripts/run_canonical_td_ctb.py": "77cf6ac2fa9b920eb07840ac80e6ac00f39827bdd131bee171941bd0714e0242"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ctb",
+    "transition_scheme": "CANONICAL_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_td_ptb.py": "a3c0a21b1143d109804d110b12990fe4c5048239affc2d8e51c1d0fab2d89d7f",
+      "stanza-main-constituency/scripts/run_canonical_td_experiments.py": "5065e375712d9440d07aa33e53829989f3a194559b2dd9454228246146e2d5ab",
+      "stanza-main-constituency/scripts/run_canonical_td_ctb.py": "77cf6ac2fa9b920eb07840ac80e6ac00f39827bdd131bee171941bd0714e0242"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_td_ptb.py": "a3c0a21b1143d109804d110b12990fe4c5048239affc2d8e51c1d0fab2d89d7f",
+      "stanza-main-constituency/scripts/run_canonical_td_experiments.py": "5065e375712d9440d07aa33e53829989f3a194559b2dd9454228246146e2d5ab"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_td_ptb.py": "a3c0a21b1143d109804d110b12990fe4c5048239affc2d8e51c1d0fab2d89d7f",
+      "stanza-main-constituency/scripts/run_canonical_td_experiments.py": "5065e375712d9440d07aa33e53829989f3a194559b2dd9454228246146e2d5ab"
+    }
+  },
+  {
+    "family": "canonical",
+    "corpus": "ptb",
+    "transition_scheme": "CANONICAL_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency/stanza/models/constituency/parse_transitions.py": "5ee861e26eab6d44b7a2ba2b124acd0ffa22f7afded454d8aead57de298bcc8b",
+      "stanza-main-constituency/stanza/models/constituency/transition_sequence.py": "6770bea5f2c0ace5b83b9a0f82eb6c3bdec79cff5f5b388e0dec4e88d0ae22a2",
+      "stanza-main-constituency/stanza/models/constituency/parser_training.py": "77217e1e577fecd6e0076ad1f010607c39765ff3a5093a5532d9b883a38e8dae",
+      "stanza-main-constituency/stanza/models/constituency/base_model.py": "9efeef02646fa0593fa2d816ea62f36f00b66379cfcf1ffc10de60ca306d5238",
+      "stanza-main-constituency/stanza/models/constituency/lstm_model.py": "902010dc0561d9661f1ae3518d7ac897cf90d07e9efc31ec3497aa455de9546e",
+      "stanza-main-constituency/stanza/models/constituency/state.py": "f9e240c2d7aac614ba3d3587c87da724c8d578531a9d71dbe3aab4f248d2001c",
+      "stanza-main-constituency/stanza/models/constituency/utils.py": "6869e194d893b8cd0df7ac334160f1ec67a22a6188119435d6ca4d30508e0fb3",
+      "stanza-main-constituency/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency/scripts/run_canonical_static.py": "ab2e4f5f75f9b5d81c7f5900cc5dc862649729b32f814862d6d5fe2c29c7639c",
+      "stanza-main-constituency/scripts/run_canonical_experiments.py": "124f4b85100b79c5ca3526c147a7788fea256b8803a77939af64413acc59d637",
+      "stanza-main-constituency/scripts/run_canonical_td_ptb.py": "a3c0a21b1143d109804d110b12990fe4c5048239affc2d8e51c1d0fab2d89d7f",
+      "stanza-main-constituency/scripts/run_canonical_td_experiments.py": "5065e375712d9440d07aa33e53829989f3a194559b2dd9454228246146e2d5ab"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_experiments.py": "f75442ed27e5c525a1e8cd3e1b85712c2233ab6a5f98b89854073336455f3b5c",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_ctb.py": "30b942cf47f28e3c383207a67ec6036e17ed543c4b36d9bfc0b738993a73f6b9",
+      "stanza-main-constituency-generalised/archived-launchers/generalised-bu-ctb/run_generalised_bu_ptb.py": "a71ea73c33a68f66ed9776c83390e28bc423445b06f7a63277a6872063b22233"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_experiments.py": "f75442ed27e5c525a1e8cd3e1b85712c2233ab6a5f98b89854073336455f3b5c",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_ctb.py": "30b942cf47f28e3c383207a67ec6036e17ed543c4b36d9bfc0b738993a73f6b9",
+      "stanza-main-constituency-generalised/archived-launchers/generalised-bu-ctb/run_generalised_bu_ptb.py": "a71ea73c33a68f66ed9776c83390e28bc423445b06f7a63277a6872063b22233"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_experiments.py": "f75442ed27e5c525a1e8cd3e1b85712c2233ab6a5f98b89854073336455f3b5c",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_ctb.py": "30b942cf47f28e3c383207a67ec6036e17ed543c4b36d9bfc0b738993a73f6b9",
+      "stanza-main-constituency-generalised/archived-launchers/generalised-bu-ctb/run_generalised_bu_ptb.py": "a71ea73c33a68f66ed9776c83390e28bc423445b06f7a63277a6872063b22233"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/archived-launchers/generalised-bu-ptb/run_canonical_experiments.py": "b5257b5b97d8e5f3d6043cdac40cbe6e4920edb28f82ec51b680f41e3b4a7f2d",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_experiments.py": "f75442ed27e5c525a1e8cd3e1b85712c2233ab6a5f98b89854073336455f3b5c",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_ptb.py": "656bb0adcb8bbbf5af8bd47d2c678e93eb7e6ddc697fa03074529a0a2be81219"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/archived-launchers/generalised-bu-ptb/run_canonical_experiments.py": "b5257b5b97d8e5f3d6043cdac40cbe6e4920edb28f82ec51b680f41e3b4a7f2d",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_experiments.py": "f75442ed27e5c525a1e8cd3e1b85712c2233ab6a5f98b89854073336455f3b5c",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_ptb.py": "656bb0adcb8bbbf5af8bd47d2c678e93eb7e6ddc697fa03074529a0a2be81219"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_BOTTOM_UP",
+    "config": {
+      "system": "bu",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/archived-launchers/generalised-bu-ptb/run_canonical_experiments.py": "b5257b5b97d8e5f3d6043cdac40cbe6e4920edb28f82ec51b680f41e3b4a7f2d",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_experiments.py": "f75442ed27e5c525a1e8cd3e1b85712c2233ab6a5f98b89854073336455f3b5c",
+      "stanza-main-constituency-generalised/scripts/run_generalised_bu_ptb.py": "656bb0adcb8bbbf5af8bd47d2c678e93eb7e6ddc697fa03074529a0a2be81219"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ptb.py": "4d91801ab8750026406c6e0ecdc0b496d4634e108569fc082bdf0dda811b1856",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_experiments.py": "4c6cf1f9328418f6dc1054f87827d2475a163f070a13bb1487751543901ffbbc",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ctb.py": "e17704bfd8440c24ba2fa4872455c6d591bf0ee5e8db1ed7b53ff124f6d3fba7"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ptb.py": "4d91801ab8750026406c6e0ecdc0b496d4634e108569fc082bdf0dda811b1856",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_experiments.py": "4c6cf1f9328418f6dc1054f87827d2475a163f070a13bb1487751543901ffbbc",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ctb.py": "e17704bfd8440c24ba2fa4872455c6d591bf0ee5e8db1ed7b53ff124f6d3fba7"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ptb.py": "4d91801ab8750026406c6e0ecdc0b496d4634e108569fc082bdf0dda811b1856",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_experiments.py": "4c6cf1f9328418f6dc1054f87827d2475a163f070a13bb1487751543901ffbbc",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ctb.py": "e17704bfd8440c24ba2fa4872455c6d591bf0ee5e8db1ed7b53ff124f6d3fba7"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ptb.py": "4d91801ab8750026406c6e0ecdc0b496d4634e108569fc082bdf0dda811b1856",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_experiments.py": "4c6cf1f9328418f6dc1054f87827d2475a163f070a13bb1487751543901ffbbc"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ptb.py": "4d91801ab8750026406c6e0ecdc0b496d4634e108569fc082bdf0dda811b1856",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_experiments.py": "4c6cf1f9328418f6dc1054f87827d2475a163f070a13bb1487751543901ffbbc"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_IN_ORDER",
+    "config": {
+      "system": "io",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_ptb.py": "4d91801ab8750026406c6e0ecdc0b496d4634e108569fc082bdf0dda811b1856",
+      "stanza-main-constituency-generalised/scripts/run_generalised_io_experiments.py": "4c6cf1f9328418f6dc1054f87827d2475a163f070a13bb1487751543901ffbbc"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ptb.py": "c5ea30b63c4c3344ba329b410c5363f0b4540c4ed20219b1b28d755595bfe239",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_experiments.py": "55b801dd520f8b05d7e3269ffae9f67ef5ec55430968a129713f1b6e257e82cc",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ctb.py": "2f209869e891a9242fa9334fa2cccf07a790d851e6978e9e96325a7faff91072"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ptb.py": "c5ea30b63c4c3344ba329b410c5363f0b4540c4ed20219b1b28d755595bfe239",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_experiments.py": "55b801dd520f8b05d7e3269ffae9f67ef5ec55430968a129713f1b6e257e82cc",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ctb.py": "2f209869e891a9242fa9334fa2cccf07a790d851e6978e9e96325a7faff91072"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ctb",
+    "transition_scheme": "GENERALISED_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-base-chinese",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 17544,
+        "prepared_sha256": "7357a9d1905506f9b2d1fc112310863cdd6ce49c61a349df737c7438f4dda0f0",
+        "source_files": [
+          {
+            "name": "zh_ctb_train.mrg",
+            "sha256": "743205d3079f14f5c04f596baa02fda4a782442cdc181c7d40cdebfb764f4f8b"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 352,
+        "prepared_sha256": "b73a04dc18a0bcace904c21c27b823bec7b90d6f87bd4e8302cb8b26dd1f67eb",
+        "source_files": [
+          {
+            "name": "zh_ctb_dev.mrg",
+            "sha256": "9f2a10b0590ef92f9074a5ac8783f8ae5f589aac9f2396a56db06bc476530a26"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 348,
+        "prepared_sha256": "ab7b57dde1ee75283625c2b0e55d5aba0b94070bb98b90906ec68bfb908af5dc",
+        "source_files": [
+          {
+            "name": "zh_ctb_test.mrg",
+            "sha256": "20122d5af11846091a5c38225249010462ae2bf94b622e33f460552b9d01b76f"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ptb.py": "c5ea30b63c4c3344ba329b410c5363f0b4540c4ed20219b1b28d755595bfe239",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_experiments.py": "55b801dd520f8b05d7e3269ffae9f67ef5ec55430968a129713f1b6e257e82cc",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ctb.py": "2f209869e891a9242fa9334fa2cccf07a790d851e6978e9e96325a7faff91072"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 1111,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ptb.py": "c5ea30b63c4c3344ba329b410c5363f0b4540c4ed20219b1b28d755595bfe239",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_experiments.py": "55b801dd520f8b05d7e3269ffae9f67ef5ec55430968a129713f1b6e257e82cc"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 2222,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ptb.py": "c5ea30b63c4c3344ba329b410c5363f0b4540c4ed20219b1b28d755595bfe239",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_experiments.py": "55b801dd520f8b05d7e3269ffae9f67ef5ec55430968a129713f1b6e257e82cc"
+    }
+  },
+  {
+    "family": "generalised",
+    "corpus": "ptb",
+    "transition_scheme": "GENERALISED_TOP_DOWN",
+    "config": {
+      "system": "td",
+      "seed": 3333,
+      "epochs": 200,
+      "epoch_size": 5000,
+      "batch_size": 16,
+      "eval_batch_size": 32,
+      "hidden_size": 256,
+      "learning_rate": 0.001,
+      "bert_model": "google-bert/bert-large-cased",
+      "bert_hidden_layers": 4,
+      "finetune_bert": false,
+      "charlm": "auto",
+      "attention": "none",
+      "retag_package": "default",
+      "gold_pos": false,
+      "stanza_args": []
+    },
+    "versions": {
+      "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "stanza": "1.14.0",
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-22.04.4-Ubuntu)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-22.04.4-Ubuntu, mixed mode, sharing)"
+    },
+    "data": {
+      "train": {
+        "sentences": 39832,
+        "prepared_sha256": "38b8ab9c4a13877a9ed3aacbee06956dd003a49ace2c22ec70a373873f373e4f",
+        "source_files": [
+          {
+            "name": "en_ptb_train.mrg",
+            "sha256": "2b2566901967189bbf80ffbdb253e493af4e56f918ae867f70d752691394c818"
+          }
+        ]
+      },
+      "dev": {
+        "sentences": 1700,
+        "prepared_sha256": "49429e56790f5002fad179a050d75ad20b327f3d3eb2fcc6e775f77ac7a9a445",
+        "source_files": [
+          {
+            "name": "en_ptb_dev.mrg",
+            "sha256": "4fab73214909ef68d25cab06e3be10b8e65b4003299caf62bf24977505743e5e"
+          }
+        ]
+      },
+      "test": {
+        "sentences": 2416,
+        "prepared_sha256": "3c073d388076f5879c08f2af22af1a141aea3d5bcd1db5bb0ce78b228e15186c",
+        "source_files": [
+          {
+            "name": "en_ptb_test.mrg",
+            "sha256": "9cfa902d91f48ee06c6a7ca8caf682c46e30a1c143e88a34f93a7a186d0e3873"
+          }
+        ]
+      }
+    },
+    "source_hashes": {
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_transitions.py": "e80b5acfb275073f39bb81fee168248a7cf69443e77866f0e49cba7457ce7408",
+      "stanza-main-constituency-generalised/stanza/models/constituency/transition_sequence.py": "84b4714ed1834b876bbc20149a23e84404ff1c0b577dd97ae28c2facf67db03d",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parser_training.py": "c33a8e806c5d43d8f7435c9cdbb3eaf0e3aa65e5d09de738a19fe116fcdeb616",
+      "stanza-main-constituency-generalised/stanza/models/constituency/base_model.py": "1dbaedf3e1ab57098a8d5e50f76b64f789bbdecd898c30fcc7aaf1de466accd4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/lstm_model.py": "1b13b878b8b24790cdb3f1b17354608e60b508976ca70d88f91f9d8331a70fc4",
+      "stanza-main-constituency-generalised/stanza/models/constituency/state.py": "b381a549c765244759cee94ec30215ea4d75e1e1816c08b4398d9b5ecc9c3bf3",
+      "stanza-main-constituency-generalised/stanza/models/constituency/utils.py": "805fd295254480b0d02992d5ac9725f512691bcebf8a523a6a002941c0690659",
+      "stanza-main-constituency-generalised/stanza/models/constituency/trainer.py": "3e36aeb162554e10e91acdf08234ef1c1e7700129e7cca7b888504a3072adc4b",
+      "stanza-main-constituency-generalised/stanza/models/constituency/parse_tree.py": "35023a07c4e74f968888dda91c9d573c267eefd06e31bf723ff48d10bc41abe0",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_top_down.py": "9ffc991200d7a4e82b576b03874415c445457b81a9df20c37bf6d7fe8773c1da",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_bottom_up.py": "0fbf867e5cc7993cb0212dc6ea97823831c70f188efa22dfc3a92af22f4a3dda",
+      "stanza-main-constituency-generalised/stanza/models/constituency/canonical_in_order.py": "23db207f0076c9b8f387b66528aec1bc6c9d710d23002189edbf32b7e7aa30c6",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_oracle.py": "c6366047ab5dd3e2400bde2364029dfd1040c2b3b9e29694868689f1d53d72fa",
+      "stanza-main-constituency-generalised/stanza/models/constituency/generalised_transitions.py": "2c7b9c665be1f222fa5236cb248037705ccbbba8053ed385619dc31e14e8194a",
+      "stanza-main-constituency-generalised/stanza/models/constituency_parser.py": "e81bc98669f06019ff5b42e6409a783a4cd2cac102be5db5fe04358cf65fdcb2",
+      "stanza-main-constituency-generalised/scripts/run_canonical_static.py": "4b2e7f5bd37789cdcaa8c3c028580e7f299a677de7db1360639bc6144b9c9f96",
+      "stanza-main-constituency-generalised/scripts/run_canonical_experiments.py": "9e72c977dc47fb57a77a9023bc5844081c0cc0fe0e737650f339e8d992aee4d9",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_ptb.py": "c5ea30b63c4c3344ba329b410c5363f0b4540c4ed20219b1b28d755595bfe239",
+      "stanza-main-constituency-generalised/scripts/run_generalised_td_experiments.py": "55b801dd520f8b05d7e3269ffae9f67ef5ec55430968a129713f1b6e257e82cc"
+    }
+  }
+]

@@ -1,0 +1,6149 @@
+{
+  "workload_method": "Gold trees including ROOT and Finish. Count exact oracle actions from Proposition 4. Multiply by training inventory size for scalar scores and by the sum of affine weight matrix sizes for MACs.",
+  "structure_method": "Sentence-level multiset matches on saved trees with punctuation retained, excluding preterminals and outer ROOT. Arity matches label, terminal span and exact number of children before grouping. Length strata use label and span and bin whole sentences by number of tokens.",
+  "workload": {
+    "ptb": {
+      "sentences": 2416,
+      "terminal_total": 56684,
+      "phrasal_total": 46692,
+      "models": {
+        "canonical-td": {
+          "classes": 79,
+          "oracle_steps_total": 265852,
+          "oracle_steps_per_sentence": 110.03807947019868,
+          "scores_per_sentence": 8693.008278145695,
+          "oracle_steps_per_token": 4.690071272316703,
+          "affine_macs_per_gold_sentence": 17211716.238410596
+        },
+        "canonical-io": {
+          "classes": 79,
+          "oracle_steps_total": 265852,
+          "oracle_steps_per_sentence": 110.03807947019868,
+          "scores_per_sentence": 8693.008278145695,
+          "oracle_steps_per_token": 4.690071272316703,
+          "affine_macs_per_gold_sentence": 17211716.238410596
+        },
+        "canonical-bu": {
+          "classes": 251,
+          "oracle_steps_total": 162476,
+          "oracle_steps_per_sentence": 67.25,
+          "scores_per_sentence": 16879.75,
+          "oracle_steps_per_token": 2.866346764519088,
+          "affine_macs_per_gold_sentence": 13480128.0
+        },
+        "delimiter-td": {
+          "classes": 80,
+          "oracle_steps_total": 265852,
+          "oracle_steps_per_sentence": 110.03807947019868,
+          "scores_per_sentence": 8803.046357615895,
+          "oracle_steps_per_token": 4.690071272316703,
+          "affine_macs_per_gold_sentence": 17239885.98675497
+        },
+        "delimiter-io": {
+          "classes": 82,
+          "oracle_steps_total": 265852,
+          "oracle_steps_per_sentence": 110.03807947019868,
+          "scores_per_sentence": 9023.122516556292,
+          "oracle_steps_per_token": 4.690071272316703,
+          "affine_macs_per_gold_sentence": 17296225.48344371
+        },
+        "delimiter-bu": {
+          "classes": 82,
+          "oracle_steps_total": 265852,
+          "oracle_steps_per_sentence": 110.03807947019868,
+          "scores_per_sentence": 9023.122516556292,
+          "oracle_steps_per_token": 4.690071272316703,
+          "affine_macs_per_gold_sentence": 17296225.48344371
+        }
+      },
+      "bins": {
+        "1-10": {
+          "sentences": 270,
+          "mean_tokens": 6.7,
+          "canonical_bu_actions": 20.074074074074073,
+          "other_actions": 32.44814814814815
+        },
+        "11-20": {
+          "sentences": 764,
+          "mean_tokens": 15.841623036649215,
+          "canonical_bu_actions": 46.044502617801044,
+          "other_actions": 75.24738219895288
+        },
+        "21-30": {
+          "sentences": 778,
+          "mean_tokens": 25.249357326478147,
+          "canonical_bu_actions": 72.47557840616966,
+          "other_actions": 118.70179948586119
+        },
+        "31-40": {
+          "sentences": 433,
+          "mean_tokens": 34.89376443418014,
+          "canonical_bu_actions": 99.17551963048498,
+          "other_actions": 162.45727482678984
+        },
+        "41-50": {
+          "sentences": 135,
+          "mean_tokens": 44.48888888888889,
+          "canonical_bu_actions": 125.65185185185184,
+          "other_actions": 205.8148148148148
+        },
+        "51-60": {
+          "sentences": 28,
+          "mean_tokens": 53.857142857142854,
+          "canonical_bu_actions": 148.5,
+          "other_actions": 242.14285714285714
+        },
+        "61-10000": {
+          "sentences": 8,
+          "mean_tokens": 63.125,
+          "canonical_bu_actions": 178.5,
+          "other_actions": 292.875
+        }
+      }
+    },
+    "ctb": {
+      "sentences": 348,
+      "terminal_total": 8008,
+      "phrasal_total": 9068,
+      "models": {
+        "canonical-td": {
+          "classes": 65,
+          "oracle_steps_total": 42508,
+          "oracle_steps_per_sentence": 122.14942528735632,
+          "scores_per_sentence": 7939.712643678161,
+          "oracle_steps_per_token": 5.3081918081918085,
+          "affine_macs_per_gold_sentence": 18668340.96551724
+        },
+        "canonical-io": {
+          "classes": 65,
+          "oracle_steps_total": 42508,
+          "oracle_steps_per_sentence": 122.14942528735632,
+          "scores_per_sentence": 7939.712643678161,
+          "oracle_steps_per_token": 5.3081918081918085,
+          "affine_macs_per_gold_sentence": 18668340.96551724
+        },
+        "canonical-bu": {
+          "classes": 227,
+          "oracle_steps_total": 25432,
+          "oracle_steps_per_sentence": 73.08045977011494,
+          "scores_per_sentence": 16589.264367816093,
+          "oracle_steps_per_token": 3.1758241758241756,
+          "affine_macs_per_gold_sentence": 14199825.655172413
+        },
+        "delimiter-td": {
+          "classes": 66,
+          "oracle_steps_total": 42508,
+          "oracle_steps_per_sentence": 122.14942528735632,
+          "scores_per_sentence": 8061.862068965517,
+          "oracle_steps_per_token": 5.3081918081918085,
+          "affine_macs_per_gold_sentence": 18699611.218390804
+        },
+        "delimiter-io": {
+          "classes": 68,
+          "oracle_steps_total": 42508,
+          "oracle_steps_per_sentence": 122.14942528735632,
+          "scores_per_sentence": 8306.16091954023,
+          "oracle_steps_per_token": 5.3081918081918085,
+          "affine_macs_per_gold_sentence": 18762151.724137932
+        },
+        "delimiter-bu": {
+          "classes": 68,
+          "oracle_steps_total": 42508,
+          "oracle_steps_per_sentence": 122.14942528735632,
+          "scores_per_sentence": 8306.16091954023,
+          "oracle_steps_per_token": 5.3081918081918085,
+          "affine_macs_per_gold_sentence": 18762151.724137932
+        }
+      },
+      "bins": {
+        "1-10": {
+          "sentences": 96,
+          "mean_tokens": 5.78125,
+          "canonical_bu_actions": 17.895833333333332,
+          "other_actions": 29.010416666666668
+        },
+        "11-20": {
+          "sentences": 81,
+          "mean_tokens": 15.395061728395062,
+          "canonical_bu_actions": 50.51851851851852,
+          "other_actions": 84.64197530864197
+        },
+        "21-30": {
+          "sentences": 84,
+          "mean_tokens": 25.047619047619047,
+          "canonical_bu_actions": 80.11904761904762,
+          "other_actions": 134.1904761904762
+        },
+        "31-40": {
+          "sentences": 38,
+          "mean_tokens": 35.473684210526315,
+          "canonical_bu_actions": 112.26315789473684,
+          "other_actions": 188.05263157894737
+        },
+        "41-50": {
+          "sentences": 28,
+          "mean_tokens": 44.32142857142857,
+          "canonical_bu_actions": 138.5,
+          "other_actions": 231.67857142857142
+        },
+        "51-60": {
+          "sentences": 10,
+          "mean_tokens": 56.9,
+          "canonical_bu_actions": 175.5,
+          "other_actions": 293.1
+        },
+        "61-10000": {
+          "sentences": 11,
+          "mean_tokens": 85.81818181818181,
+          "canonical_bu_actions": 272.09090909090907,
+          "other_actions": 457.3636363636364
+        }
+      }
+    }
+  },
+  "scoring_tensor_shapes": {
+    "canonical-td-ptb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            79,
+            256
+          ],
+          "output_layers.1.bias": [
+            79
+          ]
+        },
+        "fp32_elements": 14746819,
+        "output_elements": 156751,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            79,
+            256
+          ],
+          "output_layers.1.bias": [
+            79
+          ]
+        },
+        "fp32_elements": 14746819,
+        "output_elements": 156751,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            79,
+            256
+          ],
+          "output_layers.1.bias": [
+            79
+          ]
+        },
+        "fp32_elements": 14746819,
+        "output_elements": 156751,
+        "tensor_count": 55
+      }
+    ],
+    "canonical-td-ctb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            65,
+            256
+          ],
+          "output_layers.1.bias": [
+            65
+          ]
+        },
+        "fp32_elements": 13820845,
+        "output_elements": 153153,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            65,
+            256
+          ],
+          "output_layers.1.bias": [
+            65
+          ]
+        },
+        "fp32_elements": 13820845,
+        "output_elements": 153153,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            65,
+            256
+          ],
+          "output_layers.1.bias": [
+            65
+          ]
+        },
+        "fp32_elements": 13820845,
+        "output_elements": 153153,
+        "tensor_count": 55
+      }
+    ],
+    "canonical-io-ptb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            79,
+            256
+          ],
+          "output_layers.1.bias": [
+            79
+          ]
+        },
+        "fp32_elements": 14746819,
+        "output_elements": 156751,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            79,
+            256
+          ],
+          "output_layers.1.bias": [
+            79
+          ]
+        },
+        "fp32_elements": 14746819,
+        "output_elements": 156751,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            79,
+            256
+          ],
+          "output_layers.1.bias": [
+            79
+          ]
+        },
+        "fp32_elements": 14746819,
+        "output_elements": 156751,
+        "tensor_count": 55
+      }
+    ],
+    "canonical-io-ctb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            65,
+            256
+          ],
+          "output_layers.1.bias": [
+            65
+          ]
+        },
+        "fp32_elements": 13820845,
+        "output_elements": 153153,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            65,
+            256
+          ],
+          "output_layers.1.bias": [
+            65
+          ]
+        },
+        "fp32_elements": 13820845,
+        "output_elements": 153153,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            65,
+            256
+          ],
+          "output_layers.1.bias": [
+            65
+          ]
+        },
+        "fp32_elements": 13820845,
+        "output_elements": 153153,
+        "tensor_count": 55
+      }
+    ],
+    "canonical-bu-ptb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            251,
+            256
+          ],
+          "output_layers.1.bias": [
+            251
+          ]
+        },
+        "fp32_elements": 14794463,
+        "output_elements": 200955,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            251,
+            256
+          ],
+          "output_layers.1.bias": [
+            251
+          ]
+        },
+        "fp32_elements": 14794463,
+        "output_elements": 200955,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            251,
+            256
+          ],
+          "output_layers.1.bias": [
+            251
+          ]
+        },
+        "fp32_elements": 14794463,
+        "output_elements": 200955,
+        "tensor_count": 55
+      }
+    ],
+    "canonical-bu-ctb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            227,
+            256
+          ],
+          "output_layers.1.bias": [
+            227
+          ]
+        },
+        "fp32_elements": 13865719,
+        "output_elements": 194787,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            227,
+            256
+          ],
+          "output_layers.1.bias": [
+            227
+          ]
+        },
+        "fp32_elements": 13865719,
+        "output_elements": 194787,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            227,
+            256
+          ],
+          "output_layers.1.bias": [
+            227
+          ]
+        },
+        "fp32_elements": 13865719,
+        "output_elements": 194787,
+        "tensor_count": 55
+      }
+    ],
+    "generalised-td-ptb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            80,
+            256
+          ],
+          "output_layers.1.bias": [
+            80
+          ]
+        },
+        "fp32_elements": 14747608,
+        "output_elements": 157008,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            80,
+            256
+          ],
+          "output_layers.1.bias": [
+            80
+          ]
+        },
+        "fp32_elements": 14747608,
+        "output_elements": 157008,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            80,
+            256
+          ],
+          "output_layers.1.bias": [
+            80
+          ]
+        },
+        "fp32_elements": 14747608,
+        "output_elements": 157008,
+        "tensor_count": 55
+      }
+    ],
+    "generalised-td-ctb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            66,
+            256
+          ],
+          "output_layers.1.bias": [
+            66
+          ]
+        },
+        "fp32_elements": 13821634,
+        "output_elements": 153410,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            66,
+            256
+          ],
+          "output_layers.1.bias": [
+            66
+          ]
+        },
+        "fp32_elements": 13821634,
+        "output_elements": 153410,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            66,
+            256
+          ],
+          "output_layers.1.bias": [
+            66
+          ]
+        },
+        "fp32_elements": 13821634,
+        "output_elements": 153410,
+        "tensor_count": 55
+      }
+    ],
+    "generalised-io-ptb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            82,
+            256
+          ],
+          "output_layers.1.bias": [
+            82
+          ]
+        },
+        "fp32_elements": 14748162,
+        "output_elements": 157522,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            82,
+            256
+          ],
+          "output_layers.1.bias": [
+            82
+          ]
+        },
+        "fp32_elements": 14748162,
+        "output_elements": 157522,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            82,
+            256
+          ],
+          "output_layers.1.bias": [
+            82
+          ]
+        },
+        "fp32_elements": 14748162,
+        "output_elements": 157522,
+        "tensor_count": 55
+      }
+    ],
+    "generalised-io-ctb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            68,
+            256
+          ],
+          "output_layers.1.bias": [
+            68
+          ]
+        },
+        "fp32_elements": 13822188,
+        "output_elements": 153924,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            68,
+            256
+          ],
+          "output_layers.1.bias": [
+            68
+          ]
+        },
+        "fp32_elements": 13822188,
+        "output_elements": 153924,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            68,
+            256
+          ],
+          "output_layers.1.bias": [
+            68
+          ]
+        },
+        "fp32_elements": 13822188,
+        "output_elements": 153924,
+        "tensor_count": 55
+      }
+    ],
+    "generalised-bu-ptb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            82,
+            256
+          ],
+          "output_layers.1.bias": [
+            82
+          ]
+        },
+        "fp32_elements": 14748162,
+        "output_elements": 157522,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            82,
+            256
+          ],
+          "output_layers.1.bias": [
+            82
+          ]
+        },
+        "fp32_elements": 14748162,
+        "output_elements": 157522,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            82,
+            256
+          ],
+          "output_layers.1.bias": [
+            82
+          ]
+        },
+        "fp32_elements": 14748162,
+        "output_elements": 157522,
+        "tensor_count": 55
+      }
+    ],
+    "generalised-bu-ctb": [
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            68,
+            256
+          ],
+          "output_layers.1.bias": [
+            68
+          ]
+        },
+        "fp32_elements": 13822188,
+        "output_elements": 153924,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            68,
+            256
+          ],
+          "output_layers.1.bias": [
+            68
+          ]
+        },
+        "fp32_elements": 13822188,
+        "output_elements": 153924,
+        "tensor_count": 55
+      },
+      {
+        "output_tensors": {
+          "output_layers.0.weight": [
+            256,
+            532
+          ],
+          "output_layers.0.bias": [
+            256
+          ],
+          "output_layers.1.weight": [
+            68,
+            256
+          ],
+          "output_layers.1.bias": [
+            68
+          ]
+        },
+        "fp32_elements": 13822188,
+        "output_elements": 153924,
+        "tensor_count": 55
+      }
+    ]
+  },
+  "diagnostics": {
+    "summary": {
+      "canonical td ptb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            94.06714389271475,
+            93.93194257158721,
+            94.10323590459015
+          ],
+          "mean": 94.03410745629738,
+          "sample_sd": 0.09029898161764284
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            49.71026490066225,
+            48.22019867549669,
+            49.503311258278146
+          ],
+          "mean": 49.14459161147903,
+          "sample_sd": 0.8072076421804676
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            49.71026490066225,
+            48.22019867549669,
+            49.503311258278146
+          ],
+          "mean": 49.14459161147903,
+          "sample_sd": 0.8072076421804676
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            5.404733941638811,
+            5.5809016171289185,
+            5.443129460655886
+          ],
+          "mean": 5.476255006474538,
+          "sample_sd": 0.09263767490192487
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            0.8085644593007498,
+            0.8085644593007498,
+            0.8627698979130907
+          ],
+          "mean": 0.8266329388381968,
+          "sample_sd": 0.03129552457437672
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.802872888246454,
+            2.9429036046616677,
+            2.8548197669166138
+          ],
+          "mean": 2.8668654199415786,
+          "sample_sd": 0.07078823138444611
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            2.988561107766406,
+            3.1437739764035997,
+            3.046957863272587
+          ],
+          "mean": 3.0597643158141974,
+          "sample_sd": 0.07839491416968379
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            6.213298400939561,
+            6.3894660764296685,
+            6.305899358568976
+          ],
+          "mean": 6.302887945312735,
+          "sample_sd": 0.08812243714994997
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            5.650731618649459,
+            5.744434084551884,
+            5.484040008202137
+          ],
+          "mean": 5.62640190380116,
+          "sample_sd": 0.13189093986305161
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.3969370860927152,
+            0.39942052980132453,
+            0.37996688741721857
+          ],
+          "mean": 0.39210816777041946,
+          "sample_sd": 0.010587723533636675
+        }
+      },
+      "canonical td ctb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            89.46913366764655,
+            89.68941230804757,
+            89.10297086818575
+          ],
+          "mean": 89.42050561462662,
+          "sample_sd": 0.29622948241554425
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            40.51724137931034,
+            40.804597701149426,
+            38.50574712643678
+          ],
+          "mean": 39.94252873563218,
+          "sample_sd": 1.2525571676841016
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            40.51724137931034,
+            40.804597701149426,
+            38.50574712643678
+          ],
+          "mean": 39.94252873563218,
+          "sample_sd": 1.2525571676841016
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            9.667431192660551,
+            9.575688073394495,
+            10.034403669724771
+          ],
+          "mean": 9.759174311926605,
+          "sample_sd": 0.2427294780793203
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            1.3302752293577982,
+            1.341743119266055,
+            1.3990825688073394
+          ],
+          "mean": 1.3570336391437308,
+          "sample_sd": 0.03686410841358161
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            3.279816513761468,
+            2.9243119266055047,
+            3.073394495412844
+          ],
+          "mean": 3.0925076452599387,
+          "sample_sd": 0.17852132154182898
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            3.6850921273031827,
+            3.2826982492276002,
+            3.470154085200052
+          ],
+          "mean": 3.479314820576945,
+          "sample_sd": 0.20135329046891878
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            10.997706422018348,
+            10.917431192660551,
+            11.43348623853211
+          ],
+          "mean": 11.116207951070336,
+          "sample_sd": 0.2776871654994493
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            10.059103024684205,
+            9.695419669844222,
+            10.354033662217063
+          ],
+          "mean": 10.036185452248496,
+          "sample_sd": 0.32990454540985414
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.9511494252873564,
+            0.985632183908046,
+            1.0833333333333333
+          ],
+          "mean": 1.0067049808429118,
+          "sample_sd": 0.06856524968648761
+        }
+      },
+      "canonical io ptb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            94.20215960207122,
+            94.08989350239875,
+            94.04532795978898
+          ],
+          "mean": 94.11246035475298,
+          "sample_sd": 0.08081452916474566
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            50.04139072847682,
+            50.496688741721854,
+            50.16556291390729
+          ],
+          "mean": 50.234547461368656,
+          "sample_sd": 0.23535764499492265
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            50.04139072847682,
+            50.496688741721854,
+            50.16556291390729
+          ],
+          "mean": 50.234547461368656,
+          "sample_sd": 0.23535764499492265
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            5.27147890505014,
+            5.481524979672961,
+            5.314391543951577
+          ],
+          "mean": 5.3557984762248925,
+          "sample_sd": 0.11097629880442551
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            0.840184298491282,
+            0.8334086186647394,
+            0.8718041376818141
+          ],
+          "mean": 0.8484656849459451,
+          "sample_sd": 0.020493657344560188
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.750926009576294,
+            2.73963320986539,
+            2.7667359291715603
+          ],
+          "mean": 2.752431716204415,
+          "sample_sd": 0.013613952871401448
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            2.9299975944190524,
+            2.924300867888139,
+            2.949177841442569
+          ],
+          "mean": 2.93449210124992,
+          "sample_sd": 0.013033280363994846
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            6.111663203541422,
+            6.3149335983377,
+            6.18619568163339
+          ],
+          "mean": 6.204264161170838,
+          "sample_sd": 0.10283270790344412
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            5.481912644096314,
+            5.501765576944982,
+            5.722002814471833
+          ],
+          "mean": 5.5685603451710435,
+          "sample_sd": 0.1332553123688368
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.382864238410596,
+            0.39403973509933776,
+            0.3853476821192053
+          ],
+          "mean": 0.38741721854304634,
+          "sample_sd": 0.005868148542532224
+        }
+      },
+      "canonical io ctb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            90.43659043659044,
+            90.25133720595848,
+            90.05235602094241
+          ],
+          "mean": 90.24676122116378,
+          "sample_sd": 0.19215807625422768
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            41.95402298850575,
+            40.229885057471265,
+            40.804597701149426
+          ],
+          "mean": 40.99616858237548,
+          "sample_sd": 0.8778880641677861
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            41.95402298850575,
+            40.229885057471265,
+            40.804597701149426
+          ],
+          "mean": 40.99616858237548,
+          "sample_sd": 0.8778880641677861
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            8.646788990825687,
+            8.38302752293578,
+            8.669724770642201
+          ],
+          "mean": 8.56651376146789,
+          "sample_sd": 0.1593170182276347
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            1.5596330275229358,
+            1.639908256880734,
+            1.5825688073394495
+          ],
+          "mean": 1.5940366972477065,
+          "sample_sd": 0.04134806508559622
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.488532110091743,
+            2.706422018348624,
+            2.8325688073394497
+          ],
+          "mean": 2.675840978593272,
+          "sample_sd": 0.17404514430936113
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            2.7713920817369093,
+            3.0079021157277595,
+            3.1561461794019934
+          ],
+          "mean": 2.978480125622221,
+          "sample_sd": 0.19405712829949348
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            10.206422018348624,
+            10.022935779816514,
+            10.252293577981652
+          ],
+          "mean": 10.160550458715596,
+          "sample_sd": 0.12136473903966015
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            8.911121451838063,
+            9.472712587977385,
+            9.640919062463919
+          ],
+          "mean": 9.341584367426456,
+          "sample_sd": 0.38216108617629
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.8908045977011494,
+            0.8908045977011494,
+            0.9195402298850575
+          ],
+          "mean": 0.900383141762452,
+          "sample_sd": 0.016590524976713397
+        }
+      },
+      "canonical bu ptb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            94.0313045054024,
+            93.93154172560114,
+            94.13402131848734
+          ],
+          "mean": 94.03228918316363,
+          "sample_sd": 0.10124338781649417
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            48.88245033112583,
+            49.33774834437086,
+            50.04139072847682
+          ],
+          "mean": 49.420529801324506,
+          "sample_sd": 0.5838880786285529
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            48.88245033112583,
+            49.33774834437086,
+            50.04139072847682
+          ],
+          "mean": 49.420529801324506,
+          "sample_sd": 0.5838880786285529
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            5.397958261812269,
+            5.422802421176258,
+            5.228566266148704
+          ],
+          "mean": 5.34977564971241,
+          "sample_sd": 0.10570285739537089
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            0.8447014183756437,
+            0.8334086186647394,
+            0.8266329388381968
+          ],
+          "mean": 0.8349143252928599,
+          "sample_sd": 0.00912786133419321
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.823199927726082,
+            2.7577016894028366,
+            2.7712530490559217
+          ],
+          "mean": 2.7840515553949468,
+          "sample_sd": 0.03457392267655944
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            3.0111774908460203,
+            2.941743362405435,
+            2.9498737829065993
+          ],
+          "mean": 2.967598212052685,
+          "sample_sd": 0.03795907124116544
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            6.242659680187912,
+            6.256211039840998,
+            6.0551992049869
+          ],
+          "mean": 6.18468997500527,
+          "sample_sd": 0.1123468044809221
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            5.6931255395520015,
+            5.879951926347537,
+            5.675994376162184
+          ],
+          "mean": 5.749690614020574,
+          "sample_sd": 0.11313432859494506
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.3853476821192053,
+            0.4105960264900662,
+            0.37624172185430466
+          ],
+          "mean": 0.39072847682119205,
+          "sample_sd": 0.0177980132450331
+        }
+      },
+      "canonical bu ctb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            90.24221453287197,
+            90.54583141409489,
+            89.98446758327101
+          ],
+          "mean": 90.25750451007929,
+          "sample_sd": 0.2809940839084793
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            39.94252873563219,
+            42.81609195402299,
+            40.229885057471265
+          ],
+          "mean": 40.99616858237548,
+          "sample_sd": 1.5826352147373834
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            39.94252873563219,
+            42.81609195402299,
+            40.229885057471265
+          ],
+          "mean": 40.99616858237548,
+          "sample_sd": 1.5826352147373834
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            8.715596330275229,
+            8.53211009174312,
+            8.761467889908257
+          ],
+          "mean": 8.669724770642201,
+          "sample_sd": 0.12136473903966015
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            1.5596330275229358,
+            1.2958715596330275,
+            1.548165137614679
+          ],
+          "mean": 1.4678899082568808,
+          "sample_sd": 0.1490825688073395
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.522935779816514,
+            2.5573394495412844,
+            2.706422018348624
+          ],
+          "mean": 2.5955657492354742,
+          "sample_sd": 0.09753326316646072
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            2.8118609406952966,
+            2.8360676586544575,
+            3.0175169415675747
+          ],
+          "mean": 2.888481846972443,
+          "sample_sd": 0.11240121452399675
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            10.275229357798166,
+            9.827981651376147,
+            10.309633027522937
+          ],
+          "mean": 10.137614678899084,
+          "sample_sd": 0.2687012503178897
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            9.234338747099768,
+            9.077243293246994,
+            9.7194967101466
+          ],
+          "mean": 9.34369291683112,
+          "sample_sd": 0.3348001100776852
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.9310344827586207,
+            0.9080459770114943,
+            0.9655172413793104
+          ],
+          "mean": 0.9348659003831418,
+          "sample_sd": 0.028926568717512473
+        }
+      },
+      "generalised td ptb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            93.98076748616529,
+            94.13151392887096,
+            93.92300277825026
+          ],
+          "mean": 94.01176139776217,
+          "sample_sd": 0.10765543135554231
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            49.2135761589404,
+            49.91721854304636,
+            49.00662251655629
+          ],
+          "mean": 49.379139072847686,
+          "sample_sd": 0.47734116699796464
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            49.2135761589404,
+            49.91721854304636,
+            49.00662251655629
+          ],
+          "mean": 49.379139072847686,
+          "sample_sd": 0.47734116699796464
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            5.601228656608546,
+            5.40021682175445,
+            5.668985454873972
+          ],
+          "mean": 5.55681031107899,
+          "sample_sd": 0.13978156746124099
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            0.8085644593007498,
+            0.806305899358569,
+            0.7972716595898455
+          ],
+          "mean": 0.8040473394163881,
+          "sample_sd": 0.005975587928143014
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.8819224862227846,
+            2.7577016894028366,
+            2.8322341674948053
+          ],
+          "mean": 2.823952781040142,
+          "sample_sd": 0.06252309662720099
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            3.079299193976543,
+            2.9401849354652283,
+            3.0280346751020213
+          ],
+          "mean": 3.0158396015145974,
+          "sample_sd": 0.07035434666842012
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            6.409793115909296,
+            6.206522721113019,
+            6.466257114463818
+          ],
+          "mean": 6.360857650495378,
+          "sample_sd": 0.13660709572999677
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            5.625398560626765,
+            5.52800400382183,
+            5.684483818807078
+          ],
+          "mean": 5.6126287944185576,
+          "sample_sd": 0.0790176139934229
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.40397350993377484,
+            0.39155629139072845,
+            0.4147350993377483
+          ],
+          "mean": 0.4034216335540839,
+          "sample_sd": 0.01159925472239719
+        }
+      },
+      "generalised td ctb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            89.11929036345833,
+            89.57528957528957,
+            89.79733240949247
+          ],
+          "mean": 89.49730411608013,
+          "sample_sd": 0.34568273450321585
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            41.37931034482759,
+            40.804597701149426,
+            39.94252873563219
+          ],
+          "mean": 40.7088122605364,
+          "sample_sd": 0.7231642179378099
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            41.37931034482759,
+            40.804597701149426,
+            39.94252873563219
+          ],
+          "mean": 40.7088122605364,
+          "sample_sd": 0.7231642179378099
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            9.850917431192661,
+            9.438073394495413,
+            9.495412844036696
+          ],
+          "mean": 9.594801223241591,
+          "sample_sd": 0.22364835590688215
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            1.43348623853211,
+            1.43348623853211,
+            1.3302752293577982
+          ],
+          "mean": 1.3990825688073394,
+          "sample_sd": 0.05958890393012192
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            3.1077981651376145,
+            3.073394495412844,
+            3.096330275229358
+          ],
+          "mean": 3.0925076452599387,
+          "sample_sd": 0.01751749118866907
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            3.503102378490176,
+            3.4482758620689653,
+            3.4722222222222223
+          ],
+          "mean": 3.4745334875937877,
+          "sample_sd": 0.027486236309008632
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            11.284403669724771,
+            10.871559633027523,
+            10.825688073394495
+          ],
+          "mean": 10.99388379204893,
+          "sample_sd": 0.2526408507929406
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            10.473324846661265,
+            9.973358044712151,
+            9.570880334922665
+          ],
+          "mean": 10.00585440876536,
+          "sample_sd": 0.452099031683645
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            1.0,
+            0.9511494252873564,
+            0.9425287356321839
+          ],
+          "mean": 0.9645593869731801,
+          "sample_sd": 0.030993658404910807
+        }
+      },
+      "generalised io ptb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            93.92917750876796,
+            93.89838180377956,
+            93.97224925869757
+          ],
+          "mean": 93.93326952374836,
+          "sample_sd": 0.037103351115042864
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            48.0546357615894,
+            49.544701986754966,
+            50.538079470198674
+          ],
+          "mean": 49.37913907284768,
+          "sample_sd": 1.2499725886209854
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            48.0546357615894,
+            49.544701986754966,
+            50.538079470198674
+          ],
+          "mean": 49.37913907284768,
+          "sample_sd": 1.2499725886209854
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            5.416026741349715,
+            5.42731954106062,
+            5.361821302737375
+          ],
+          "mean": 5.40172252838257,
+          "sample_sd": 0.035013749975106215
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            0.8266329388381968,
+            0.8672870177974523,
+            0.8718041376818141
+          ],
+          "mean": 0.8552413647724877,
+          "sample_sd": 0.024878356433671065
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.8661125666275185,
+            2.7802872888246455,
+            2.7644773692293794
+          ],
+          "mean": 2.8036257415605146,
+          "sample_sd": 0.05468949505725909
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            3.05694738870688,
+            2.967051507628528,
+            2.9482609114558245
+          ],
+          "mean": 2.9907532692637444,
+          "sample_sd": 0.058090599177237856
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            6.242659680187912,
+            6.294606558858072,
+            6.233625440419189
+          ],
+          "mean": 6.256963893155057,
+          "sample_sd": 0.03291097207575844
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            5.898354263952487,
+            5.9078332652968655,
+            5.820970010435098
+          ],
+          "mean": 5.8757191798948165,
+          "sample_sd": 0.04765046205461632
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.41721854304635764,
+            0.41225165562913907,
+            0.4064569536423841
+          ],
+          "mean": 0.4119757174392936,
+          "sample_sd": 0.005386098591595801
+        }
+      },
+      "generalised io ctb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            90.551271722868,
+            89.84307639248146,
+            89.90487172095705
+          ],
+          "mean": 90.0997399454355,
+          "sample_sd": 0.3922567719987265
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            40.51724137931034,
+            38.50574712643678,
+            39.08045977011494
+          ],
+          "mean": 39.36781609195402,
+          "sample_sd": 1.0360779527195358
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            40.51724137931034,
+            38.50574712643678,
+            39.08045977011494
+          ],
+          "mean": 39.36781609195402,
+          "sample_sd": 1.0360779527195358
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            8.38302752293578,
+            8.692660550458715,
+            8.93348623853211
+          ],
+          "mean": 8.669724770642201,
+          "sample_sd": 0.27594517008064107
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            1.3876146788990826,
+            1.6857798165137614,
+            1.651376146788991
+          ],
+          "mean": 1.5749235474006116,
+          "sample_sd": 0.16312376371064116
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.8096330275229358,
+            2.981651376146789,
+            2.8555045871559632
+          ],
+          "mean": 2.882262996941896,
+          "sample_sd": 0.08907630120589491
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            3.113879003558719,
+            3.326935380678183,
+            3.1935359753751444
+          ],
+          "mean": 3.211450119870682,
+          "sample_sd": 0.10765195022651967
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            9.770642201834862,
+            10.378440366972477,
+            10.5848623853211
+          ],
+          "mean": 10.244648318042813,
+          "sample_sd": 0.4232775225152985
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            9.124509124509125,
+            9.934309093004495,
+            9.6
+          ],
+          "mean": 9.552939405837874,
+          "sample_sd": 0.4069459692464655
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.882183908045977,
+            0.9022988505747126,
+            0.9109195402298851
+          ],
+          "mean": 0.8984674329501916,
+          "sample_sd": 0.014745981147835876
+        }
+      },
+      "generalised bu ptb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            93.92723563413804,
+            93.94866218083781,
+            94.01510091805432
+          ],
+          "mean": 93.96366624434339,
+          "sample_sd": 0.04581395497751013
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            49.75165562913907,
+            47.723509933774835,
+            49.62748344370861
+          ],
+          "mean": 49.03421633554084,
+          "sample_sd": 1.1368017138584174
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            49.75165562913907,
+            47.723509933774835,
+            49.62748344370861
+          ],
+          "mean": 49.03421633554084,
+          "sample_sd": 1.1368017138584174
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            5.544764658054024,
+            5.486042099557323,
+            5.343752823199928
+          ],
+          "mean": 5.458186526937092,
+          "sample_sd": 0.103360481482786
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            0.8695455777396333,
+            0.855994218086548,
+            0.8672870177974523
+          ],
+          "mean": 0.8642756045412112,
+          "sample_sd": 0.007260254435053611
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.820941367783901,
+            2.8796639262806036,
+            2.753184569518475
+          ],
+          "mean": 2.81792995452766,
+          "sample_sd": 0.063293430773583
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            3.014287093348779,
+            3.0746599787788176,
+            2.935510282714444
+          ],
+          "mean": 3.0081524516140137,
+          "sample_sd": 0.06977739498299088
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            6.414310235793658,
+            6.3420363176438705,
+            6.21103984099738
+          ],
+          "mean": 6.322462131478303,
+          "sample_sd": 0.10303919120020269
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            5.728716385311917,
+            5.7588291441298125,
+            5.757665161246397
+          ],
+          "mean": 5.748403563562709,
+          "sample_sd": 0.017059526800209307
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.40521523178807944,
+            0.4019039735099338,
+            0.40480132450331124
+          ],
+          "mean": 0.40397350993377484,
+          "sample_sd": 0.0018041800262999282
+        }
+      },
+      "generalised bu ctb": {
+        "corpus_exact_bracket_f1": {
+          "seed_values": [
+            90.97822329761493,
+            90.3263066705169,
+            90.43918724457491
+          ],
+          "mean": 90.58123907090224,
+          "sample_sd": 0.34840043512303137
+        },
+        "complete_bracket_match": {
+          "seed_values": [
+            42.81609195402299,
+            40.804597701149426,
+            43.96551724137931
+          ],
+          "mean": 42.52873563218391,
+          "sample_sd": 1.5999322881695457
+        },
+        "complete_phrasal_tree_match": {
+          "seed_values": [
+            42.81609195402299,
+            40.804597701149426,
+            43.96551724137931
+          ],
+          "mean": 42.52873563218391,
+          "sample_sd": 1.5999322881695457
+        },
+        "span_miss_gold": {
+          "seed_values": [
+            7.958715596330276,
+            8.795871559633028,
+            8.279816513761467
+          ],
+          "mean": 8.344801223241591,
+          "sample_sd": 0.42234439273299434
+        },
+        "label_miss_gold": {
+          "seed_values": [
+            1.4908256880733946,
+            1.525229357798165,
+            1.628440366972477
+          ],
+          "mean": 1.5481651376146788,
+          "sample_sd": 0.07161694952291735
+        },
+        "arity_miss_gold": {
+          "seed_values": [
+            2.614678899082569,
+            2.8440366972477062,
+            2.8440366972477062
+          ],
+          "mean": 2.767584097859327,
+          "sample_sd": 0.1324197865113819
+        },
+        "arity_miss_matched_brackets": {
+          "seed_values": [
+            2.8875379939209727,
+            3.1713554987212276,
+            3.1568228105906315
+          ],
+          "mean": 3.0719054344109438,
+          "sample_sd": 0.15983214504814922
+        },
+        "gold_unmatched": {
+          "seed_values": [
+            9.44954128440367,
+            10.321100917431192,
+            9.908256880733944
+          ],
+          "mean": 9.892966360856269,
+          "sample_sd": 0.435980961143218
+        },
+        "pred_unmatched": {
+          "seed_values": [
+            8.589951377633712,
+            9.016870273414776,
+            9.210678377441349
+          ],
+          "mean": 8.939166676163278,
+          "sample_sd": 0.3175750129369669
+        },
+        "crossing_per_sentence": {
+          "seed_values": [
+            0.7586206896551724,
+            0.853448275862069,
+            0.8505747126436781
+          ],
+          "mean": 0.8208812260536398,
+          "sample_sd": 0.05393834569080877
+        }
+      }
+    },
+    "paired": {
+      "td ptb": {
+        "evalb": {
+          "seed_values": [
+            0.005059544128982907,
+            0.18934727958033193,
+            -0.1215708988980424
+          ],
+          "mean": 0.024278641603757478,
+          "sample_sd": 0.1563475574094019
+        },
+        "jp_evalb": {
+          "seed_values": [
+            -0.09453016544912884,
+            0.20644033420754226,
+            -0.16876671037161373
+          ],
+          "mean": -0.018952180537733437,
+          "sample_sd": 0.19869349618924753
+        },
+        "identical_brackets": {
+          "seed_values": [
+            63.824503311258276,
+            63.16225165562914,
+            67.01158940397352
+          ],
+          "mean": 64.66611479028698,
+          "sample_sd": 2.0580531301285436
+        },
+        "f1_ties": {
+          "seed_values": [
+            65.14900662251655,
+            65.23178807947019,
+            69.03973509933775
+          ],
+          "mean": 66.47350993377484,
+          "sample_sd": 2.2228015864399944
+        },
+        "wins": {
+          "seed_values": [
+            17.259933774834437,
+            18.211920529801326,
+            15.2317880794702
+          ],
+          "mean": 16.90121412803532,
+          "sample_sd": 1.5221061704522825
+        },
+        "losses": {
+          "seed_values": [
+            17.591059602649008,
+            16.556291390728475,
+            15.728476821192054
+          ],
+          "mean": 16.625275938189844,
+          "sample_sd": 0.9332056607663277
+        }
+      },
+      "td ctb": {
+        "evalb": {
+          "seed_values": [
+            -0.3366286614968317,
+            -0.1104060276313561,
+            0.6679088299727738
+          ],
+          "mean": 0.073624713614862,
+          "sample_sd": 0.5269481741449877
+        },
+        "jp_evalb": {
+          "seed_values": [
+            -0.33548699184824216,
+            -0.09637003930316723,
+            0.7551474899220949
+          ],
+          "mean": 0.10776348625689518,
+          "sample_sd": 0.573257154686968
+        },
+        "identical_brackets": {
+          "seed_values": [
+            54.02298850574713,
+            52.87356321839081,
+            51.4367816091954
+          ],
+          "mean": 52.77777777777778,
+          "sample_sd": 1.2957614232249723
+        },
+        "f1_ties": {
+          "seed_values": [
+            55.747126436781606,
+            54.59770114942529,
+            52.298850574712645
+          ],
+          "mean": 54.21455938697318,
+          "sample_sd": 1.755776128335569
+        },
+        "wins": {
+          "seed_values": [
+            22.126436781609197,
+            22.126436781609197,
+            23.850574712643677
+          ],
+          "mean": 22.70114942528736,
+          "sample_sd": 0.9954314986028017
+        },
+        "losses": {
+          "seed_values": [
+            22.126436781609197,
+            23.275862068965516,
+            23.850574712643677
+          ],
+          "mean": 23.084291187739463,
+          "sample_sd": 0.8778880641677841
+        }
+      },
+      "io ptb": {
+        "evalb": {
+          "seed_values": [
+            -0.24727526556013402,
+            -0.21141595868073182,
+            -0.14250574922226633
+          ],
+          "mean": -0.2003989911543774,
+          "sample_sd": 0.05324653104686954
+        },
+        "jp_evalb": {
+          "seed_values": [
+            -0.2527306368756683,
+            -0.2014274325279075,
+            -0.05861836217388827
+          ],
+          "mean": -0.17092547719248805,
+          "sample_sd": 0.10058663309276125
+        },
+        "identical_brackets": {
+          "seed_values": [
+            62.33443708609271,
+            60.80298013245033,
+            63.32781456953642
+          ],
+          "mean": 62.155077262693155,
+          "sample_sd": 1.27193737792448
+        },
+        "f1_ties": {
+          "seed_values": [
+            64.19701986754967,
+            62.70695364238411,
+            65.39735099337749
+          ],
+          "mean": 64.10044150110376,
+          "sample_sd": 1.347796354130352
+        },
+        "wins": {
+          "seed_values": [
+            16.39072847682119,
+            17.9635761589404,
+            17.839403973509935
+          ],
+          "mean": 17.397902869757175,
+          "sample_sd": 0.8744454678526954
+        },
+        "losses": {
+          "seed_values": [
+            19.412251655629138,
+            19.329470198675498,
+            16.763245033112582
+          ],
+          "mean": 18.501655629139073,
+          "sample_sd": 1.5060766058493589
+        }
+      },
+      "io ctb": {
+        "evalb": {
+          "seed_values": [
+            0.1089974541703782,
+            -0.3927632539259349,
+            -0.1410302669151946
+          ],
+          "mean": -0.14159868889025043,
+          "sample_sd": 0.25088083700232006
+        },
+        "jp_evalb": {
+          "seed_values": [
+            0.04850761462284936,
+            -0.3918157508503839,
+            -0.12234675691236419
+          ],
+          "mean": -0.15521829771329956,
+          "sample_sd": 0.2219945273906303
+        },
+        "identical_brackets": {
+          "seed_values": [
+            56.03448275862069,
+            50.28735632183908,
+            53.160919540229884
+          ],
+          "mean": 53.160919540229884,
+          "sample_sd": 2.8735632183908066
+        },
+        "f1_ties": {
+          "seed_values": [
+            57.758620689655174,
+            52.01149425287356,
+            54.88505747126437
+          ],
+          "mean": 54.88505747126437,
+          "sample_sd": 2.8735632183908066
+        },
+        "wins": {
+          "seed_values": [
+            17.528735632183906,
+            20.114942528735632,
+            23.275862068965516
+          ],
+          "mean": 20.306513409961685,
+          "sample_sd": 2.8783485059993716
+        },
+        "losses": {
+          "seed_values": [
+            24.71264367816092,
+            27.873563218390803,
+            21.839080459770116
+          ],
+          "mean": 24.808429118773947,
+          "sample_sd": 3.018381466779449
+        }
+      },
+      "bu ptb": {
+        "evalb": {
+          "seed_values": [
+            0.024432077545696984,
+            0.03438302360730461,
+            -0.06093195955335773
+          ],
+          "mean": -0.0007056194667853788,
+          "sample_sd": 0.05239431612348671
+        },
+        "jp_evalb": {
+          "seed_values": [
+            -0.10064727676684981,
+            0.022932178780393997,
+            -0.11266616289564979
+          ],
+          "mean": -0.0634604202940352,
+          "sample_sd": 0.07505913859797862
+        },
+        "identical_brackets": {
+          "seed_values": [
+            60.38907284768212,
+            58.31953642384106,
+            61.299668874172184
+          ],
+          "mean": 60.00275938189846,
+          "sample_sd": 1.5271627044174083
+        },
+        "f1_ties": {
+          "seed_values": [
+            62.41721854304636,
+            60.5546357615894,
+            63.36920529801324
+          ],
+          "mean": 62.113686534216335,
+          "sample_sd": 1.4316246641943444
+        },
+        "wins": {
+          "seed_values": [
+            18.915562913907284,
+            19.039735099337747,
+            18.00496688741722
+          ],
+          "mean": 18.653421633554082,
+          "sample_sd": 0.5649998683621206
+        },
+        "losses": {
+          "seed_values": [
+            18.667218543046356,
+            20.405629139072847,
+            18.625827814569536
+          ],
+          "mean": 19.23289183222958,
+          "sample_sd": 1.0158311332339935
+        }
+      },
+      "bu ctb": {
+        "evalb": {
+          "seed_values": [
+            0.7072594591475081,
+            -0.20996973161614108,
+            0.4374177002550397
+          ],
+          "mean": 0.3115691425954689,
+          "sample_sd": 0.471387040229131
+        },
+        "jp_evalb": {
+          "seed_values": [
+            0.6979173369224867,
+            -0.18183701240738515,
+            0.4364564839581533
+          ],
+          "mean": 0.31751226949108496,
+          "sample_sd": 0.4517772940372253
+        },
+        "identical_brackets": {
+          "seed_values": [
+            53.160919540229884,
+            49.71264367816092,
+            49.71264367816092
+          ],
+          "mean": 50.862068965517246,
+          "sample_sd": 1.9908629972056033
+        },
+        "f1_ties": {
+          "seed_values": [
+            54.02298850574713,
+            51.4367816091954,
+            50.86206896551724
+          ],
+          "mean": 52.10727969348659,
+          "sample_sd": 1.6837543899661858
+        },
+        "wins": {
+          "seed_values": [
+            25.862068965517242,
+            20.689655172413794,
+            25.57471264367816
+          ],
+          "mean": 24.042145593869733,
+          "sample_sd": 2.906894809481517
+        },
+        "losses": {
+          "seed_values": [
+            20.114942528735632,
+            27.873563218390803,
+            23.563218390804597
+          ],
+          "mean": 23.850574712643677,
+          "sample_sd": 3.887284269674908
+        }
+      }
+    },
+    "strata_summary": {
+      "canonical td ptb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              93.4898491550414,
+              93.41221982022984,
+              93.55003693811445
+            ],
+            "mean": 93.4840353044619,
+            "sample_sd": 0.06909225817286367
+          },
+          "2": {
+            "seed_values": [
+              92.98326746825865,
+              92.76550998948476,
+              92.88877641401999
+            ],
+            "mean": 92.87918462392113,
+            "sample_sd": 0.10919515428106571
+          },
+          "3": {
+            "seed_values": [
+              88.70978758281538,
+              88.14341980171126,
+              88.52481305234534
+            ],
+            "mean": 88.459340145624,
+            "sample_sd": 0.28880467794706405
+          },
+          "4": {
+            "seed_values": [
+              81.51638466481045,
+              80.62015503875969,
+              81.73467207861567
+            ],
+            "mean": 81.29040392739527,
+            "sample_sd": 0.5906246932649916
+          },
+          "5": {
+            "seed_values": [
+              80.96500530222694,
+              80.8850973073847,
+              81.9994682265355
+            ],
+            "mean": 81.28319027871571,
+            "sample_sd": 0.6216002701170744
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              95.6140350877193,
+              95.472597299444,
+              95.85326953748006
+            ],
+            "mean": 95.64663397488113,
+            "sample_sd": 0.1924184341116688
+          },
+          "2": {
+            "seed_values": [
+              95.06074592816596,
+              95.14202282983807,
+              95.4390814373804
+            ],
+            "mean": 95.21395006512815,
+            "sample_sd": 0.1991596966393851
+          },
+          "3": {
+            "seed_values": [
+              94.2334376714318,
+              94.27759478137312,
+              94.46310892880217
+            ],
+            "mean": 94.32471379386904,
+            "sample_sd": 0.12187031065630304
+          },
+          "4": {
+            "seed_values": [
+              93.53053031903656,
+              93.36549039519336,
+              93.26166088207907
+            ],
+            "mean": 93.38589386543633,
+            "sample_sd": 0.13559100165912874
+          },
+          "5": {
+            "seed_values": [
+              92.84027042437077,
+              91.98113207547169,
+              92.40929474113331
+            ],
+            "mean": 92.41023241365859,
+            "sample_sd": 0.4295699419880107
+          }
+        }
+      },
+      "canonical td ctb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              89.75397973950795,
+              90.02468418759983,
+              89.69415857370633
+            ],
+            "mean": 89.82427416693804,
+            "sample_sd": 0.17611863971684324
+          },
+          "2": {
+            "seed_values": [
+              87.3453853472883,
+              87.56110809342748,
+              87.09808709808709
+            ],
+            "mean": 87.33486017960095,
+            "sample_sd": 0.23168986792183108
+          },
+          "3": {
+            "seed_values": [
+              79.47911989223171,
+              81.74853537629564,
+              79.51153324287652
+            ],
+            "mean": 80.24639617046796,
+            "sample_sd": 1.3009916608450895
+          },
+          "4": {
+            "seed_values": [
+              58.701298701298704,
+              61.49732620320856,
+              61.170212765957444
+            ],
+            "mean": 60.45627922348824,
+            "sample_sd": 1.528632812403306
+          },
+          "5": {
+            "seed_values": [
+              69.36170212765957,
+              69.8744769874477,
+              65.69037656903765
+            ],
+            "mean": 68.30885189471498,
+            "sample_sd": 2.2821139953107923
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              94.80048367593712,
+              94.20289855072464,
+              93.33333333333333
+            ],
+            "mean": 94.11223851999836,
+            "sample_sd": 0.7377648425000136
+          },
+          "2": {
+            "seed_values": [
+              91.59929701230229,
+              91.41856392294221,
+              91.90710767065447
+            ],
+            "mean": 91.64165620196633,
+            "sample_sd": 0.2470110808626397
+          },
+          "3": {
+            "seed_values": [
+              91.45408163265306,
+              90.73876942729402,
+              92.3076923076923
+            ],
+            "mean": 91.50018112254646,
+            "sample_sd": 0.785476685450078
+          },
+          "4": {
+            "seed_values": [
+              88.69565217391305,
+              90.63545150501672,
+              89.47015425888665
+            ],
+            "mean": 89.60041931260547,
+            "sample_sd": 0.9764384770188228
+          },
+          "5": {
+            "seed_values": [
+              86.54521143239178,
+              86.92876344086021,
+              84.48160535117057
+            ],
+            "mean": 85.98519340814086,
+            "sample_sd": 1.316191786784051
+          }
+        }
+      },
+      "canonical io ptb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              93.79787777336435,
+              93.57516488514896,
+              93.58131095486505
+            ],
+            "mean": 93.65145120445945,
+            "sample_sd": 0.12684635826141705
+          },
+          "2": {
+            "seed_values": [
+              93.16874855180839,
+              93.05376843082246,
+              93.08205203710325
+            ],
+            "mean": 93.10152300657803,
+            "sample_sd": 0.05991198581837253
+          },
+          "3": {
+            "seed_values": [
+              88.68090878263818,
+              88.65099261467579,
+              88.39068003251151
+            ],
+            "mean": 88.57419380994183,
+            "sample_sd": 0.15962996008408395
+          },
+          "4": {
+            "seed_values": [
+              81.5100815100815,
+              81.47033533963886,
+              81.28227194492254
+            ],
+            "mean": 81.42089626488097,
+            "sample_sd": 0.12168593213336755
+          },
+          "5": {
+            "seed_values": [
+              81.72615876398508,
+              82.01859229747676,
+              81.16484103660166
+            ],
+            "mean": 81.6365306993545,
+            "sample_sd": 0.43387520825523535
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              95.75901704320253,
+              95.90457256461232,
+              96.31683168316832
+            ],
+            "mean": 95.99347376366106,
+            "sample_sd": 0.2893386606284517
+          },
+          "2": {
+            "seed_values": [
+              95.25124827366407,
+              95.19404572036152,
+              95.06874037900101
+            ],
+            "mean": 95.17134479100886,
+            "sample_sd": 0.09334764083088105
+          },
+          "3": {
+            "seed_values": [
+              94.58961852773022,
+              94.51607691064793,
+              94.35837851794474
+            ],
+            "mean": 94.48802465210763,
+            "sample_sd": 0.11814475205571309
+          },
+          "4": {
+            "seed_values": [
+              93.64831171026498,
+              93.37510053761164,
+              93.57085567140867
+            ],
+            "mean": 93.53142263976176,
+            "sample_sd": 0.14080947838942387
+          },
+          "5": {
+            "seed_values": [
+              92.36529383037603,
+              92.32774067437694,
+              92.1362934048955
+            ],
+            "mean": 92.27644263654949,
+            "sample_sd": 0.12281659184033918
+          }
+        }
+      },
+      "canonical io ctb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              90.63637687490899,
+              90.33935018050542,
+              90.45065932473554
+            ],
+            "mean": 90.47546212671665,
+            "sample_sd": 0.15005865032267737
+          },
+          "2": {
+            "seed_values": [
+              88.61722358054877,
+              88.64160673089971,
+              88.12643522896123
+            ],
+            "mean": 88.46175518013656,
+            "sample_sd": 0.2906514007319315
+          },
+          "3": {
+            "seed_values": [
+              82.5368468066101,
+              81.15555555555555,
+              80.49977688531905
+            ],
+            "mean": 81.3973930824949,
+            "sample_sd": 1.039844944275004
+          },
+          "4": {
+            "seed_values": [
+              72.20779220779221,
+              69.31216931216932,
+              67.5603217158177
+            ],
+            "mean": 69.69342774525974,
+            "sample_sd": 2.3470756246966964
+          },
+          "5": {
+            "seed_values": [
+              76.02591792656588,
+              73.97849462365592,
+              72.57019438444924
+            ],
+            "mean": 74.19153564489035,
+            "sample_sd": 1.7376841362662137
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              95.44364508393285,
+              93.87755102040816,
+              95.31812725090036
+            ],
+            "mean": 94.87977445174712,
+            "sample_sd": 0.8702169478618105
+          },
+          "2": {
+            "seed_values": [
+              92.48067463106113,
+              91.17647058823529,
+              92.27542817196785
+            ],
+            "mean": 91.97752446375476,
+            "sample_sd": 0.701282404496328
+          },
+          "3": {
+            "seed_values": [
+              92.27823867262285,
+              92.66638406104282,
+              91.6790806554586
+            ],
+            "mean": 92.20790112970809,
+            "sample_sd": 0.4973957490037593
+          },
+          "4": {
+            "seed_values": [
+              91.0984212294256,
+              90.61142666221183,
+              89.68519758874749
+            ],
+            "mean": 90.4650151601283,
+            "sample_sd": 0.7178979806348806
+          },
+          "5": {
+            "seed_values": [
+              86.97549513259483,
+              87.22231501586771,
+              87.17094301899367
+            ],
+            "mean": 87.1229177224854,
+            "sample_sd": 0.13022993328432367
+          }
+        }
+      },
+      "canonical bu ptb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              93.55351265463625,
+              93.55662787397105,
+              93.48195088831051
+            ],
+            "mean": 93.5306971389726,
+            "sample_sd": 0.042244216918827106
+          },
+          "2": {
+            "seed_values": [
+              92.93639598290419,
+              92.80664582852587,
+              93.05310106875368
+            ],
+            "mean": 92.93204762672791,
+            "sample_sd": 0.12328514715898603
+          },
+          "3": {
+            "seed_values": [
+              88.19985105950849,
+              88.49533410530618,
+              88.6062246278755
+            ],
+            "mean": 88.43380326423006,
+            "sample_sd": 0.21005809332060252
+          },
+          "4": {
+            "seed_values": [
+              81.80645161290323,
+              81.27814711559083,
+              82.3656378156702
+            ],
+            "mean": 81.81674551472142,
+            "sample_sd": 0.5438184246609912
+          },
+          "5": {
+            "seed_values": [
+              81.61960575386254,
+              81.87883640245529,
+              81.81091877496671
+            ],
+            "mean": 81.76978697709485,
+            "sample_sd": 0.13442098381422035
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              94.99602859412232,
+              95.89257503949447,
+              95.71088165210485
+            ],
+            "mean": 95.53316176190721,
+            "sample_sd": 0.47395901901562554
+          },
+          "2": {
+            "seed_values": [
+              95.06369426751593,
+              94.94563776186688,
+              95.17899761336515
+            ],
+            "mean": 95.06277654758266,
+            "sample_sd": 0.11668263251329035
+          },
+          "3": {
+            "seed_values": [
+              94.60463013787091,
+              94.52925798018268,
+              94.65801620347955
+            ],
+            "mean": 94.59730144051105,
+            "sample_sd": 0.06469120782908654
+          },
+          "4": {
+            "seed_values": [
+              93.04270688125713,
+              93.17635143689074,
+              93.36482895347366
+            ],
+            "mean": 93.19462909054052,
+            "sample_sd": 0.16183699150525988
+          },
+          "5": {
+            "seed_values": [
+              92.71070615034168,
+              91.92395190120247,
+              92.37391374969545
+            ],
+            "mean": 92.3361906004132,
+            "sample_sd": 0.394731350577171
+          }
+        }
+      },
+      "canonical bu ctb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              90.38938311214817,
+              90.5928395419626,
+              90.61319383900029
+            ],
+            "mean": 90.53180549770369,
+            "sample_sd": 0.12376056028666167
+          },
+          "2": {
+            "seed_values": [
+              88.57026917354254,
+              88.94601542416453,
+              87.75043700416835
+            ],
+            "mean": 88.42224053395847,
+            "sample_sd": 0.6113806491809942
+          },
+          "3": {
+            "seed_values": [
+              82.32682060390763,
+              82.24799286351472,
+              80.82622361921868
+            ],
+            "mean": 81.80034569554701,
+            "sample_sd": 0.8445346753428954
+          },
+          "4": {
+            "seed_values": [
+              70.55702917771883,
+              72.04301075268818,
+              69.70509383378015
+            ],
+            "mean": 70.76837792139573,
+            "sample_sd": 1.1832012079606087
+          },
+          "5": {
+            "seed_values": [
+              74.18655097613883,
+              74.13793103448276,
+              75.0
+            ],
+            "mean": 74.44149400354053,
+            "sample_sd": 0.4842909102415076
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              93.10761789600967,
+              94.37125748502994,
+              94.00479616306954
+            ],
+            "mean": 93.82789051470306,
+            "sample_sd": 0.650129186433594
+          },
+          "2": {
+            "seed_values": [
+              92.32394366197182,
+              93.23044545773413,
+              92.14111072301782
+            ],
+            "mean": 92.56516661424126,
+            "sample_sd": 0.5833557453141723
+          },
+          "3": {
+            "seed_values": [
+              91.8757975329647,
+              92.1639413888299,
+              91.38481174218252
+            ],
+            "mean": 91.80818355465904,
+            "sample_sd": 0.39394097161624997
+          },
+          "4": {
+            "seed_values": [
+              90.21447721179625,
+              89.94638069705094,
+              90.86039504519584
+            ],
+            "mean": 90.34041765134768,
+            "sample_sd": 0.4698417849547794
+          },
+          "5": {
+            "seed_values": [
+              87.58977785201269,
+              87.76089497411922,
+              86.86228742914305
+            ],
+            "mean": 87.40432008509165,
+            "sample_sd": 0.4771475845642816
+          }
+        }
+      },
+      "generalised td ptb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              93.4566710175359,
+              93.5692412385165,
+              93.45656611476525
+            ],
+            "mean": 93.49415945693922,
+            "sample_sd": 0.06502275136259485
+          },
+          "2": {
+            "seed_values": [
+              92.83348452564292,
+              93.01493040200477,
+              92.73325737435118
+            ],
+            "mean": 92.86055743399962,
+            "sample_sd": 0.14277475407806464
+          },
+          "3": {
+            "seed_values": [
+              88.08796579108125,
+              88.8237299693147,
+              88.58695652173913
+            ],
+            "mean": 88.49955076071168,
+            "sample_sd": 0.3755889465738786
+          },
+          "4": {
+            "seed_values": [
+              80.93803786574871,
+              81.42275551746305,
+              80.97392803275156
+            ],
+            "mean": 81.1115738053211,
+            "sample_sd": 0.2700880773017666
+          },
+          "5": {
+            "seed_values": [
+              82.30626818302036,
+              82.46495636075113,
+              81.39167105956774
+            ],
+            "mean": 82.05429853444642,
+            "sample_sd": 0.5793115416474459
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              96.13699721226602,
+              96.06361829025845,
+              95.95559080095163
+            ],
+            "mean": 96.05206876782536,
+            "sample_sd": 0.09125302799258972
+          },
+          "2": {
+            "seed_values": [
+              95.19051921135144,
+              95.08161854628595,
+              95.21177658500292
+            ],
+            "mean": 95.1613047808801,
+            "sample_sd": 0.06982399996767266
+          },
+          "3": {
+            "seed_values": [
+              94.16591290864453,
+              94.37288135593221,
+              94.07694794697704
+            ],
+            "mean": 94.20524740385126,
+            "sample_sd": 0.15183724022397282
+          },
+          "4": {
+            "seed_values": [
+              93.35985441618351,
+              93.68737051287472,
+              93.25210475102594
+            ],
+            "mean": 93.43310989336139,
+            "sample_sd": 0.2266910773759513
+          },
+          "5": {
+            "seed_values": [
+              92.41300627495721,
+              92.52808074230832,
+              92.43423731574232
+            ],
+            "mean": 92.45844144433595,
+            "sample_sd": 0.06123653435464758
+          }
+        }
+      },
+      "generalised td ctb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              89.04919924974752,
+              89.74099262046013,
+              90.07700130756938
+            ],
+            "mean": 89.62239772592568,
+            "sample_sd": 0.5240637645105234
+          },
+          "2": {
+            "seed_values": [
+              87.3335145419951,
+              87.5050875050875,
+              87.9695155144257
+            ],
+            "mean": 87.6027058538361,
+            "sample_sd": 0.32904606933143465
+          },
+          "3": {
+            "seed_values": [
+              80.5265546981389,
+              80.21680216802169,
+              79.74854063762909
+            ],
+            "mean": 80.16396583459655,
+            "sample_sd": 0.39168894314889313
+          },
+          "4": {
+            "seed_values": [
+              59.48717948717949,
+              64.22976501305483,
+              63.9386189258312
+            ],
+            "mean": 62.55185447535517,
+            "sample_sd": 2.6580756381993025
+          },
+          "5": {
+            "seed_values": [
+              68.05845511482255,
+              70.46413502109705,
+              68.51063829787235
+            ],
+            "mean": 69.01107614459731,
+            "sample_sd": 1.2785352876198859
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              94.7242206235012,
+              94.04617253948967,
+              94.03166869671132
+            ],
+            "mean": 94.26735395323406,
+            "sample_sd": 0.3957245963603567
+          },
+          "2": {
+            "seed_values": [
+              92.30228471001757,
+              91.89757979656261,
+              92.1024921024921
+            ],
+            "mean": 92.10078553635744,
+            "sample_sd": 0.20235785386198002
+          },
+          "3": {
+            "seed_values": [
+              91.15646258503402,
+              92.1343537414966,
+              92.22577209797657
+            ],
+            "mean": 91.83886280816907,
+            "sample_sd": 0.592740986752597
+          },
+          "4": {
+            "seed_values": [
+              89.41569282136895,
+              89.44723618090453,
+              90.25537634408602
+            ],
+            "mean": 89.70610178211983,
+            "sample_sd": 0.4759471128182803
+          },
+          "5": {
+            "seed_values": [
+              85.07437740264082,
+              85.90984974958263,
+              85.9819337571094
+            ],
+            "mean": 85.65538696977762,
+            "sample_sd": 0.5044582379777807
+          }
+        }
+      },
+      "generalised io ptb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              93.56047700170357,
+              93.34088977047323,
+              93.41955979124121
+            ],
+            "mean": 93.44030885447268,
+            "sample_sd": 0.11125435159394896
+          },
+          "2": {
+            "seed_values": [
+              92.71334103075469,
+              92.79303894575338,
+              92.83207598713935
+            ],
+            "mean": 92.7794853212158,
+            "sample_sd": 0.06051671686811613
+          },
+          "3": {
+            "seed_values": [
+              88.09797685905677,
+              88.37303735787764,
+              88.34846226798537
+            ],
+            "mean": 88.27315882830659,
+            "sample_sd": 0.1522088220948016
+          },
+          "4": {
+            "seed_values": [
+              81.4719173660426,
+              81.77489177489177,
+              81.86528497409327
+            ],
+            "mean": 81.70403137167588,
+            "sample_sd": 0.2060349881059394
+          },
+          "5": {
+            "seed_values": [
+              81.74240387200861,
+              81.6,
+              82.84875966924513
+            ],
+            "mean": 82.06372118041791,
+            "sample_sd": 0.6835815879584903
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              96.21965777954635,
+              96.22266401590457,
+              95.38216560509554
+            ],
+            "mean": 95.94149580018215,
+            "sample_sd": 0.4843964901978384
+          },
+          "2": {
+            "seed_values": [
+              95.09049413513083,
+              95.02463837227786,
+              95.18603046547423
+            ],
+            "mean": 95.10038765762764,
+            "sample_sd": 0.08114963510159862
+          },
+          "3": {
+            "seed_values": [
+              94.47203767012836,
+              94.17535254445126,
+              94.35679024295808
+            ],
+            "mean": 94.33472681917924,
+            "sample_sd": 0.14956808466762936
+          },
+          "4": {
+            "seed_values": [
+              93.11566691976715,
+              93.34628050325087,
+              93.37499472195246
+            ],
+            "mean": 93.27898071499015,
+            "sample_sd": 0.14216073076457494
+          },
+          "5": {
+            "seed_values": [
+              91.88575137942226,
+              92.06142845535061,
+              92.01070646443345
+            ],
+            "mean": 91.98596209973545,
+            "sample_sd": 0.09041471915520664
+          }
+        }
+      },
+      "generalised io ctb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              90.87749782797567,
+              89.8302625852314,
+              89.83739837398375
+            ],
+            "mean": 90.18171959573027,
+            "sample_sd": 0.6025721875594511
+          },
+          "2": {
+            "seed_values": [
+              88.56408174313168,
+              88.147450558321,
+              88.31415030467163
+            ],
+            "mean": 88.34189420204143,
+            "sample_sd": 0.20969663545259415
+          },
+          "3": {
+            "seed_values": [
+              81.28628852166146,
+              79.96414164051994,
+              80.62921348314607
+            ],
+            "mean": 80.62654788177582,
+            "sample_sd": 0.6610774711794839
+          },
+          "4": {
+            "seed_values": [
+              69.0721649484536,
+              66.66666666666667,
+              66.66666666666667
+            ],
+            "mean": 67.46849942726232,
+            "sample_sd": 1.388815080524868
+          },
+          "5": {
+            "seed_values": [
+              74.12280701754386,
+              71.39784946236558,
+              72.53218884120172
+            ],
+            "mean": 72.68428177370372,
+            "sample_sd": 1.3688307471957917
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              94.7242206235012,
+              93.86281588447653,
+              94.15971394517283
+            ],
+            "mean": 94.24891681771685,
+            "sample_sd": 0.437575588277176
+          },
+          "2": {
+            "seed_values": [
+              91.78947368421052,
+              92.11994421199442,
+              92.85965529370384
+            ],
+            "mean": 92.2563577299696,
+            "sample_sd": 0.5479768747303109
+          },
+          "3": {
+            "seed_values": [
+              92.74313683762503,
+              91.60499048424614,
+              91.14516815666241
+            ],
+            "mean": 91.83109849284453,
+            "sample_sd": 0.8226296858238227
+          },
+          "4": {
+            "seed_values": [
+              92.0,
+              90.44117647058823,
+              89.73154362416108
+            ],
+            "mean": 90.72424003158311,
+            "sample_sd": 1.1604168720521897
+          },
+          "5": {
+            "seed_values": [
+              86.93911592994162,
+              86.49824326585244,
+              87.01754385964912
+            ],
+            "mean": 86.81830101848107,
+            "sample_sd": 0.2799383124954764
+          }
+        }
+      },
+      "generalised bu ptb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              93.55167724388032,
+              93.43852877738676,
+              93.38018589888914
+            ],
+            "mean": 93.45679730671874,
+            "sample_sd": 0.08719303139979769
+          },
+          "2": {
+            "seed_values": [
+              92.8108985849554,
+              92.85699257295546,
+              92.89019772822886
+            ],
+            "mean": 92.8526962953799,
+            "sample_sd": 0.039823762149385725
+          },
+          "3": {
+            "seed_values": [
+              88.14065575996199,
+              87.86252801738776,
+              88.55303287021349
+            ],
+            "mean": 88.18540554918775,
+            "sample_sd": 0.3474207041481285
+          },
+          "4": {
+            "seed_values": [
+              81.53549217242119,
+              81.0880829015544,
+              81.82793391975972
+            ],
+            "mean": 81.4838363312451,
+            "sample_sd": 0.37262062037757226
+          },
+          "5": {
+            "seed_values": [
+              81.40090209604669,
+              82.04449152542372,
+              82.85637871088527
+            ],
+            "mean": 82.1005907774519,
+            "sample_sd": 0.729358203247265
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              95.57945041816009,
+              95.93301435406698,
+              95.51052840683353
+            ],
+            "mean": 95.67433105968686,
+            "sample_sd": 0.22666130239817447
+          },
+          "2": {
+            "seed_values": [
+              94.97556830252815,
+              95.07012324691883,
+              95.16077682266794
+            ],
+            "mean": 95.06882279070497,
+            "sample_sd": 0.09261110825849334
+          },
+          "3": {
+            "seed_values": [
+              94.3832563547689,
+              94.21711630308506,
+              94.4686340912756
+            ],
+            "mean": 94.35633558304319,
+            "sample_sd": 0.12790170212626698
+          },
+          "4": {
+            "seed_values": [
+              93.1922995557436,
+              93.32826298221151,
+              93.32882673539228
+            ],
+            "mean": 93.28312975778246,
+            "sample_sd": 0.07866176743646054
+          },
+          "5": {
+            "seed_values": [
+              92.24888165921107,
+              92.34399153852412,
+              92.13136075434889
+            ],
+            "mean": 92.24141131736135,
+            "sample_sd": 0.10651205143201939
+          }
+        }
+      },
+      "generalised bu ctb": {
+        "arity": {
+          "1": {
+            "seed_values": [
+              90.76655052264809,
+              90.29622063329928,
+              90.78508199100276
+            ],
+            "mean": 90.61595104898338,
+            "sample_sd": 0.27704964873644294
+          },
+          "2": {
+            "seed_values": [
+              89.48152159198592,
+              88.63328822733423,
+              88.2902396101259
+            ],
+            "mean": 88.80168314314868,
+            "sample_sd": 0.6132339079260107
+          },
+          "3": {
+            "seed_values": [
+              82.89414917373827,
+              81.40161725067385,
+              81.94690265486726
+            ],
+            "mean": 82.08088969309313,
+            "sample_sd": 0.7552332620793383
+          },
+          "4": {
+            "seed_values": [
+              71.61803713527851,
+              67.02412868632707,
+              68.66485013623978
+            ],
+            "mean": 69.10233865261512,
+            "sample_sd": 2.327991808578174
+          },
+          "5": {
+            "seed_values": [
+              74.51820128479658,
+              72.72727272727273,
+              71.36752136752136
+            ],
+            "mean": 72.87099845986356,
+            "sample_sd": 1.5802496005178774
+          }
+        },
+        "length": {
+          "1": {
+            "seed_values": [
+              95.32934131736526,
+              94.1034897713598,
+              94.6987951807229
+            ],
+            "mean": 94.71054208981599,
+            "sample_sd": 0.6130101920979161
+          },
+          "2": {
+            "seed_values": [
+              92.08025343189018,
+              93.06582189369941,
+              92.68463423171158
+            ],
+            "mean": 92.6102365191004,
+            "sample_sd": 0.496978433093009
+          },
+          "3": {
+            "seed_values": [
+              92.16020451640392,
+              91.59717767799872,
+              92.2127659574468
+            ],
+            "mean": 91.99004938394981,
+            "sample_sd": 0.341250361573173
+          },
+          "4": {
+            "seed_values": [
+              90.70234113712375,
+              90.70234113712375,
+              90.91516366065464
+            ],
+            "mean": 90.77328197830072,
+            "sample_sd": 0.12287314125017419
+          },
+          "5": {
+            "seed_values": [
+              89.06302100700233,
+              87.31593038821954,
+              87.14953271028037
+            ],
+            "mean": 87.84282803516741,
+            "sample_sd": 1.059988308045134
+          }
+        }
+      }
+    },
+    "strata_per_seed": {
+      "canonical td ptb 1111": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8755,
+            "matched": 8243,
+            "f1": 93.4898491550414
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23732,
+            "matched": 22117,
+            "f1": 92.98326746825865
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7260,
+            "matched": 6494,
+            "f1": 88.70978758281538
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2352,
+            "matched": 1903,
+            "f1": 81.51638466481045
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1913,
+            "matched": 1527,
+            "f1": 80.96500530222694
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1246,
+            "matched": 1199,
+            "f1": 95.6140350877193
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9405,
+            "matched": 8959,
+            "f1": 95.06074592816596
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15447,
+            "matched": 14601,
+            "f1": 94.2334376714318
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11806,
+            "matched": 11067,
+            "f1": 93.53053031903656
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6108,
+            "matched": 5699,
+            "f1": 92.84027042437077
+          }
+        }
+      },
+      "canonical td ptb 2222": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8699,
+            "matched": 8210,
+            "f1": 93.41221982022984
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23710,
+            "matched": 22055,
+            "f1": 92.76550998948476
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7345,
+            "matched": 6490,
+            "f1": 88.14341980171126
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2327,
+            "matched": 1872,
+            "f1": 80.62015503875969
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1892,
+            "matched": 1517,
+            "f1": 80.8850973073847
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1256,
+            "matched": 1202,
+            "f1": 95.472597299444
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9391,
+            "matched": 8960,
+            "f1": 95.14202282983807
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15424,
+            "matched": 14597,
+            "f1": 94.27759478137312
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11775,
+            "matched": 11033,
+            "f1": 93.36549039519336
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6127,
+            "matched": 5655,
+            "f1": 91.98113207547169
+          }
+        }
+      },
+      "canonical td ptb 3333": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8718,
+            "matched": 8231,
+            "f1": 93.55003693811445
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23578,
+            "matched": 22023,
+            "f1": 92.88877641401999
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7329,
+            "matched": 6511,
+            "f1": 88.52481305234534
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2364,
+            "matched": 1913,
+            "f1": 81.73467207861567
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1902,
+            "matched": 1542,
+            "f1": 81.9994682265355
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1246,
+            "matched": 1202,
+            "f1": 95.85326953748006
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9368,
+            "matched": 8977,
+            "f1": 95.4390814373804
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15414,
+            "matched": 14621,
+            "f1": 94.46310892880217
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11767,
+            "matched": 11017,
+            "f1": 93.26166088207907
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6096,
+            "matched": 5667,
+            "f1": 92.40929474113331
+          }
+        }
+      },
+      "canonical td ctb 1111": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3428,
+            "matched": 3101,
+            "f1": 89.75397973950795
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3659,
+            "matched": 3213,
+            "f1": 87.3453853472883
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1106,
+            "matched": 885,
+            "f1": 79.47911989223171
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 201,
+            "matched": 113,
+            "f1": 58.701298701298704
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 235,
+            "matched": 163,
+            "f1": 69.36170212765957
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 411,
+            "matched": 392,
+            "f1": 94.80048367593712
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1409,
+            "matched": 1303,
+            "f1": 91.59929701230229
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2350,
+            "matched": 2151,
+            "f1": 91.45408163265306
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1496,
+            "matched": 1326,
+            "f1": 88.69565217391305
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2963,
+            "matched": 2589,
+            "f1": 86.54521143239178
+          }
+        }
+      },
+      "canonical td ctb 2222": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3405,
+            "matched": 3100,
+            "f1": 90.02468418759983
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3666,
+            "matched": 3224,
+            "f1": 87.56110809342748
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1098,
+            "matched": 907,
+            "f1": 81.74853537629564
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 190,
+            "matched": 115,
+            "f1": 61.49732620320856
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 243,
+            "matched": 167,
+            "f1": 69.8744769874477
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 412,
+            "matched": 390,
+            "f1": 94.20289855072464
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1419,
+            "matched": 1305,
+            "f1": 91.41856392294221
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2343,
+            "matched": 2131,
+            "f1": 90.73876942729402
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1496,
+            "matched": 1355,
+            "f1": 90.63545150501672
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2932,
+            "matched": 2587,
+            "f1": 86.92876344086021
+          }
+        }
+      },
+      "canonical td ctb 3333": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3417,
+            "matched": 3094,
+            "f1": 89.69415857370633
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3673,
+            "matched": 3210,
+            "f1": 87.09808709808709
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1090,
+            "matched": 879,
+            "f1": 79.51153324287652
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 192,
+            "matched": 115,
+            "f1": 61.170212765957444
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 243,
+            "matched": 157,
+            "f1": 65.69037656903765
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 409,
+            "matched": 385,
+            "f1": 93.33333333333333
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1406,
+            "matched": 1306,
+            "f1": 91.90710767065447
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2352,
+            "matched": 2172,
+            "f1": 92.3076923076923
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1488,
+            "matched": 1334,
+            "f1": 89.47015425888665
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2960,
+            "matched": 2526,
+            "f1": 84.48160535117057
+          }
+        }
+      },
+      "canonical io ptb 1111": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8744,
+            "matched": 8265,
+            "f1": 93.79787777336435
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23633,
+            "matched": 22115,
+            "f1": 93.16874855180839
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7364,
+            "matched": 6538,
+            "f1": 88.68090878263818
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2345,
+            "matched": 1900,
+            "f1": 81.5100815100815
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1895,
+            "matched": 1534,
+            "f1": 81.72615876398508
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1261,
+            "matched": 1208,
+            "f1": 95.75901704320253
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9382,
+            "matched": 8966,
+            "f1": 95.25124827366407
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15417,
+            "matched": 14642,
+            "f1": 94.58961852773022
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11804,
+            "matched": 11080,
+            "f1": 93.64831171026498
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6117,
+            "matched": 5674,
+            "f1": 92.36529383037603
+          }
+        }
+      },
+      "canonical io ptb 2222": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8709,
+            "matched": 8229,
+            "f1": 93.57516488514896
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23567,
+            "matched": 22057,
+            "f1": 93.05376843082246
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7378,
+            "matched": 6542,
+            "f1": 88.65099261467579
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2335,
+            "matched": 1895,
+            "f1": 81.47033533963886
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1906,
+            "matched": 1544,
+            "f1": 82.01859229747676
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1253,
+            "matched": 1206,
+            "f1": 95.90457256461232
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9366,
+            "matched": 8953,
+            "f1": 95.19404572036152
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15403,
+            "matched": 14624,
+            "f1": 94.51607691064793
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11764,
+            "matched": 11029,
+            "f1": 93.37510053761164
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6109,
+            "matched": 5668,
+            "f1": 92.32774067437694
+          }
+        }
+      },
+      "canonical io ptb 3333": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8757,
+            "matched": 8252,
+            "f1": 93.58131095486505
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23703,
+            "matched": 22127,
+            "f1": 93.08205203710325
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7383,
+            "matched": 6525,
+            "f1": 88.39068003251151
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2331,
+            "matched": 1889,
+            "f1": 81.28227194492254
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1884,
+            "matched": 1519,
+            "f1": 81.16484103660166
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1263,
+            "matched": 1216,
+            "f1": 96.31683168316832
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9395,
+            "matched": 8955,
+            "f1": 95.06874037900101
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15442,
+            "matched": 14618,
+            "f1": 94.35837851794474
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11830,
+            "matched": 11083,
+            "f1": 93.57085567140867
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6128,
+            "matched": 5665,
+            "f1": 92.1362934048955
+          }
+        }
+      },
+      "canonical io ctb 1111": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3385,
+            "matched": 3112,
+            "f1": 90.63637687490899
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3664,
+            "matched": 3262,
+            "f1": 88.61722358054877
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1118,
+            "matched": 924,
+            "f1": 82.5368468066101
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 201,
+            "matched": 139,
+            "f1": 72.20779220779221
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 228,
+            "matched": 176,
+            "f1": 76.02591792656588
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 418,
+            "matched": 398,
+            "f1": 95.44364508393285
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1410,
+            "matched": 1316,
+            "f1": 92.48067463106113
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2347,
+            "matched": 2169,
+            "f1": 92.27823867262285
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1483,
+            "matched": 1356,
+            "f1": 91.0984212294256
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2938,
+            "matched": 2591,
+            "f1": 86.97549513259483
+          }
+        }
+      },
+      "canonical io ctb 2222": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3443,
+            "matched": 3128,
+            "f1": 90.33935018050542
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3671,
+            "matched": 3266,
+            "f1": 88.64160673089971
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1129,
+            "matched": 913,
+            "f1": 81.15555555555555
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 194,
+            "matched": 131,
+            "f1": 69.31216931216932
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 230,
+            "matched": 172,
+            "f1": 73.97849462365592
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 417,
+            "matched": 391,
+            "f1": 93.87755102040816
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1420,
+            "matched": 1302,
+            "f1": 91.17647058823529
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2364,
+            "matched": 2186,
+            "f1": 92.66638406104282
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1499,
+            "matched": 1356,
+            "f1": 90.61142666221183
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2967,
+            "matched": 2611,
+            "f1": 87.22231501586771
+          }
+        }
+      },
+      "canonical io ctb 3333": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3419,
+            "matched": 3121,
+            "f1": 90.45065932473554
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3705,
+            "matched": 3262,
+            "f1": 88.12643522896123
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1120,
+            "matched": 902,
+            "f1": 80.49977688531905
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 189,
+            "matched": 126,
+            "f1": 67.5603217158177
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 228,
+            "matched": 168,
+            "f1": 72.57019438444924
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 417,
+            "matched": 397,
+            "f1": 95.31812725090036
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1425,
+            "matched": 1320,
+            "f1": 92.27542817196785
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2345,
+            "matched": 2154,
+            "f1": 91.6790806554586
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1492,
+            "matched": 1339,
+            "f1": 89.68519758874749
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2982,
+            "matched": 2616,
+            "f1": 87.17094301899367
+          }
+        }
+      },
+      "canonical bu ptb 1111": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8743,
+            "matched": 8243,
+            "f1": 93.55351265463625
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23657,
+            "matched": 22071,
+            "f1": 92.93639598290419
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7390,
+            "matched": 6514,
+            "f1": 88.19985105950849
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2333,
+            "matched": 1902,
+            "f1": 81.80645161290323
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1895,
+            "matched": 1532,
+            "f1": 81.61960575386254
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1256,
+            "matched": 1196,
+            "f1": 94.99602859412232
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9396,
+            "matched": 8955,
+            "f1": 95.06369426751593
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15429,
+            "matched": 14650,
+            "f1": 94.60463013787091
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11814,
+            "matched": 11013,
+            "f1": 93.04270688125713
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6123,
+            "matched": 5698,
+            "f1": 92.71070615034168
+          }
+        }
+      },
+      "canonical bu ptb 2222": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8736,
+            "matched": 8240,
+            "f1": 93.55662787397105
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23829,
+            "matched": 22120,
+            "f1": 92.80664582852587
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7300,
+            "matched": 6496,
+            "f1": 88.49533410530618
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2346,
+            "matched": 1895,
+            "f1": 81.27814711559083
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1888,
+            "matched": 1534,
+            "f1": 81.87883640245529
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1270,
+            "matched": 1214,
+            "f1": 95.89257503949447
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9411,
+            "matched": 8951,
+            "f1": 94.94563776186688
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15441,
+            "matched": 14644,
+            "f1": 94.52925798018268
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11838,
+            "matched": 11040,
+            "f1": 93.17635143689074
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6139,
+            "matched": 5657,
+            "f1": 91.92395190120247
+          }
+        }
+      },
+      "canonical bu ptb 3333": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8795,
+            "matched": 8261,
+            "f1": 93.48195088831051
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23692,
+            "matched": 22115,
+            "f1": 93.05310106875368
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7399,
+            "matched": 6548,
+            "f1": 88.6062246278755
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2316,
+            "matched": 1908,
+            "f1": 82.3656378156702
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1896,
+            "matched": 1536,
+            "f1": 81.81091877496671
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1256,
+            "matched": 1205,
+            "f1": 95.71088165210485
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9411,
+            "matched": 8973,
+            "f1": 95.17899761336515
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15439,
+            "matched": 14663,
+            "f1": 94.65801620347955
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11848,
+            "matched": 11067,
+            "f1": 93.36482895347366
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6144,
+            "matched": 5687,
+            "f1": 92.37391374969545
+          }
+        }
+      },
+      "canonical bu ctb 1111": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3375,
+            "matched": 3099,
+            "f1": 90.38938311214817
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3695,
+            "matched": 3274,
+            "f1": 88.57026917354254
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1131,
+            "matched": 927,
+            "f1": 82.32682060390763
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 193,
+            "matched": 133,
+            "f1": 70.55702917771883
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 226,
+            "matched": 171,
+            "f1": 74.18655097613883
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 411,
+            "matched": 385,
+            "f1": 93.10761789600967
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1404,
+            "matched": 1311,
+            "f1": 92.32394366197182
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2348,
+            "matched": 2160,
+            "f1": 91.8757975329647
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1490,
+            "matched": 1346,
+            "f1": 90.21447721179625
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2967,
+            "matched": 2622,
+            "f1": 87.58977785201269
+          }
+        }
+      },
+      "canonical bu ctb 2222": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3417,
+            "matched": 3125,
+            "f1": 90.5928395419626
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3693,
+            "matched": 3287,
+            "f1": 88.94601542416453
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1121,
+            "matched": 922,
+            "f1": 82.24799286351472
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 188,
+            "matched": 134,
+            "f1": 72.04301075268818
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 229,
+            "matched": 172,
+            "f1": 74.13793103448276
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 419,
+            "matched": 394,
+            "f1": 94.37125748502994
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1415,
+            "matched": 1329,
+            "f1": 93.23044545773413
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2355,
+            "matched": 2170,
+            "f1": 92.1639413888299
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1490,
+            "matched": 1342,
+            "f1": 89.94638069705094
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2969,
+            "matched": 2628,
+            "f1": 87.76089497411922
+          }
+        }
+      },
+      "canonical bu ctb 3333": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3400,
+            "matched": 3118,
+            "f1": 90.61319383900029
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3739,
+            "matched": 3263,
+            "f1": 87.75043700416835
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1106,
+            "matched": 900,
+            "f1": 80.82622361921868
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 189,
+            "matched": 130,
+            "f1": 69.70509383378015
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 229,
+            "matched": 174,
+            "f1": 75.0
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 418,
+            "matched": 392,
+            "f1": 94.00479616306954
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1427,
+            "matched": 1319,
+            "f1": 92.14111072301782
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2347,
+            "matched": 2148,
+            "f1": 91.38481174218252
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1493,
+            "matched": 1357,
+            "f1": 90.86039504519584
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2978,
+            "matched": 2605,
+            "f1": 86.86228742914305
+          }
+        }
+      },
+      "generalised td ptb 1111": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8742,
+            "matched": 8234,
+            "f1": 93.4566710175359
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23561,
+            "matched": 22002,
+            "f1": 92.83348452564292
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7352,
+            "matched": 6489,
+            "f1": 88.08796579108125
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2331,
+            "matched": 1881,
+            "f1": 80.93803786574871
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1922,
+            "matched": 1556,
+            "f1": 82.30626818302036
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1249,
+            "matched": 1207,
+            "f1": 96.13699721226602
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9373,
+            "matched": 8956,
+            "f1": 95.19051921135144
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15414,
+            "matched": 14575,
+            "f1": 94.16591290864453
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11770,
+            "matched": 11030,
+            "f1": 93.35985441618351
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6102,
+            "matched": 5670,
+            "f1": 92.41300627495721
+          }
+        }
+      },
+      "generalised td ptb 2222": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8755,
+            "matched": 8250,
+            "f1": 93.5692412385165
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23647,
+            "matched": 22085,
+            "f1": 93.01493040200477
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7284,
+            "matched": 6513,
+            "f1": 88.8237299693147
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2350,
+            "matched": 1900,
+            "f1": 81.42275551746305
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1922,
+            "matched": 1559,
+            "f1": 82.46495636075113
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1253,
+            "matched": 1208,
+            "f1": 96.06361829025845
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9363,
+            "matched": 8941,
+            "f1": 95.08161854628595
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15433,
+            "matched": 14616,
+            "f1": 94.37288135593221
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11792,
+            "matched": 11079,
+            "f1": 93.68737051287472
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6117,
+            "matched": 5684,
+            "f1": 92.52808074230832
+          }
+        }
+      },
+      "generalised td ptb 3333": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8757,
+            "matched": 8241,
+            "f1": 93.45656611476525
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23554,
+            "matched": 21975,
+            "f1": 92.73325737435118
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7339,
+            "matched": 6520,
+            "f1": 88.58695652173913
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2324,
+            "matched": 1879,
+            "f1": 80.97392803275156
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1935,
+            "matched": 1544,
+            "f1": 81.39167105956774
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1260,
+            "matched": 1210,
+            "f1": 95.95559080095163
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9373,
+            "matched": 8958,
+            "f1": 95.21177658500292
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15388,
+            "matched": 14549,
+            "f1": 94.07694794697704
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11778,
+            "matched": 11021,
+            "f1": 93.25210475102594
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6110,
+            "matched": 5675,
+            "f1": 92.43423731574232
+          }
+        }
+      },
+      "generalised td ctb 1111": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3449,
+            "matched": 3086,
+            "f1": 89.04919924974752
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3660,
+            "matched": 3213,
+            "f1": 87.3335145419951
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1082,
+            "matched": 887,
+            "f1": 80.5265546981389
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 206,
+            "matched": 116,
+            "f1": 59.48717948717949
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 244,
+            "matched": 163,
+            "f1": 68.05845511482255
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 418,
+            "matched": 395,
+            "f1": 94.7242206235012
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1409,
+            "matched": 1313,
+            "f1": 92.30228471001757
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2350,
+            "matched": 2144,
+            "f1": 91.15646258503402
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1501,
+            "matched": 1339,
+            "f1": 89.41569282136895
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2963,
+            "matched": 2545,
+            "f1": 85.07437740264082
+          }
+        }
+      },
+      "generalised td ctb 2222": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3429,
+            "matched": 3101,
+            "f1": 89.74099262046013
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3673,
+            "matched": 3225,
+            "f1": 87.5050875050875
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1093,
+            "matched": 888,
+            "f1": 80.21680216802169
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 199,
+            "matched": 123,
+            "f1": 64.22976501305483
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 239,
+            "matched": 167,
+            "f1": 70.46413502109705
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 407,
+            "matched": 387,
+            "f1": 94.04617253948967
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1415,
+            "matched": 1310,
+            "f1": 91.89757979656261
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2350,
+            "matched": 2167,
+            "f1": 92.1343537414966
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1491,
+            "matched": 1335,
+            "f1": 89.44723618090453
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2970,
+            "matched": 2573,
+            "f1": 85.90984974958263
+          }
+        }
+      },
+      "generalised td ctb 3333": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3401,
+            "matched": 3100,
+            "f1": 90.07700130756938
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3650,
+            "matched": 3232,
+            "f1": 87.9695155144257
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1106,
+            "matched": 888,
+            "f1": 79.74854063762909
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 207,
+            "matched": 125,
+            "f1": 63.9386189258312
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 235,
+            "matched": 161,
+            "f1": 68.51063829787235
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 405,
+            "matched": 386,
+            "f1": 94.03166869671132
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1413,
+            "matched": 1312,
+            "f1": 92.1024921024921
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2341,
+            "matched": 2165,
+            "f1": 92.22577209797657
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1482,
+            "matched": 1343,
+            "f1": 90.25537634408602
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2958,
+            "matched": 2570,
+            "f1": 85.9819337571094
+          }
+        }
+      },
+      "generalised io ptb 1111": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8731,
+            "matched": 8238,
+            "f1": 93.56047700170357
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23795,
+            "matched": 22082,
+            "f1": 92.71334103075469
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7398,
+            "matched": 6510,
+            "f1": 88.09797685905677
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2330,
+            "matched": 1893,
+            "f1": 81.4719173660426
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1860,
+            "matched": 1520,
+            "f1": 81.74240387200861
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1251,
+            "matched": 1209,
+            "f1": 96.21965777954635
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9397,
+            "matched": 8958,
+            "f1": 95.09049413513083
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15464,
+            "matched": 14646,
+            "f1": 94.47203767012836
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11847,
+            "matched": 11037,
+            "f1": 93.11566691976715
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6155,
+            "matched": 5662,
+            "f1": 91.88575137942226
+          }
+        }
+      },
+      "generalised io ptb 2222": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8766,
+            "matched": 8235,
+            "f1": 93.34088977047323
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23739,
+            "matched": 22075,
+            "f1": 92.79303894575338
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7395,
+            "matched": 6529,
+            "f1": 88.37303735787764
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2303,
+            "matched": 1889,
+            "f1": 81.77489177489177
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1891,
+            "matched": 1530,
+            "f1": 81.6
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1253,
+            "matched": 1210,
+            "f1": 96.22266401590457
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9429,
+            "matched": 8967,
+            "f1": 95.02463837227786
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15447,
+            "matched": 14592,
+            "f1": 94.17535254445126
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11827,
+            "matched": 11055,
+            "f1": 93.34628050325087
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6138,
+            "matched": 5665,
+            "f1": 92.06142845535061
+          }
+        }
+      },
+      "generalised io ptb 3333": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8749,
+            "matched": 8234,
+            "f1": 93.41955979124121
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23747,
+            "matched": 22088,
+            "f1": 92.83207598713935
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7381,
+            "matched": 6521,
+            "f1": 88.34846226798537
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2315,
+            "matched": 1896,
+            "f1": 81.86528497409327
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1890,
+            "matched": 1553,
+            "f1": 82.84875966924513
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1250,
+            "matched": 1198,
+            "f1": 95.38216560509554
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9397,
+            "matched": 8967,
+            "f1": 95.18603046547423
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15451,
+            "matched": 14622,
+            "f1": 94.35679024295808
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11824,
+            "matched": 11057,
+            "f1": 93.37499472195246
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6160,
+            "matched": 5672,
+            "f1": 92.01070646443345
+          }
+        }
+      },
+      "generalised io ctb 1111": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3424,
+            "matched": 3138,
+            "f1": 90.87749782797567
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3691,
+            "matched": 3272,
+            "f1": 88.56408174313168
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1118,
+            "matched": 910,
+            "f1": 81.28628852166146
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 204,
+            "matched": 134,
+            "f1": 69.0721649484536
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 221,
+            "matched": 169,
+            "f1": 74.12280701754386
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 418,
+            "matched": 395,
+            "f1": 94.7242206235012
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1414,
+            "matched": 1308,
+            "f1": 91.78947368421052
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2345,
+            "matched": 2179,
+            "f1": 92.74313683762503
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1506,
+            "matched": 1380,
+            "f1": 92.0
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2975,
+            "matched": 2606,
+            "f1": 86.93911592994162
+          }
+        }
+      },
+      "generalised io ctb 2222": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3411,
+            "matched": 3096,
+            "f1": 89.8302625852314
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3735,
+            "matched": 3276,
+            "f1": 88.147450558321
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1110,
+            "matched": 892,
+            "f1": 79.96414164051994
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 191,
+            "matched": 125,
+            "f1": 66.66666666666667
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 230,
+            "matched": 166,
+            "f1": 71.39784946236558
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 415,
+            "matched": 390,
+            "f1": 93.86281588447653
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1432,
+            "matched": 1321,
+            "f1": 92.11994421199442
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2375,
+            "matched": 2166,
+            "f1": 91.60499048424614
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1498,
+            "matched": 1353,
+            "f1": 90.44117647058823
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2957,
+            "matched": 2585,
+            "f1": 86.49824326585244
+          }
+        }
+      },
+      "generalised io ctb 3333": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3406,
+            "matched": 3094,
+            "f1": 89.83739837398375
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3687,
+            "matched": 3261,
+            "f1": 88.31415030467163
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1104,
+            "matched": 897,
+            "f1": 80.62921348314607
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 197,
+            "matched": 127,
+            "f1": 66.66666666666667
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 231,
+            "matched": 169,
+            "f1": 72.53218884120172
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 423,
+            "matched": 395,
+            "f1": 94.15971394517283
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1407,
+            "matched": 1320,
+            "f1": 92.85965529370384
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2344,
+            "matched": 2141,
+            "f1": 91.14516815666241
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1486,
+            "matched": 1337,
+            "f1": 89.73154362416108
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2965,
+            "matched": 2604,
+            "f1": 87.01754385964912
+          }
+        }
+      },
+      "generalised bu ptb 1111": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8769,
+            "matched": 8255,
+            "f1": 93.55167724388032
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23579,
+            "matched": 22005,
+            "f1": 92.8108985849554
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7350,
+            "matched": 6492,
+            "f1": 88.14065575996199
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2346,
+            "matched": 1901,
+            "f1": 81.53549217242119
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1910,
+            "matched": 1534,
+            "f1": 81.40090209604669
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1249,
+            "matched": 1200,
+            "f1": 95.57945041816009
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9384,
+            "matched": 8941,
+            "f1": 94.97556830252815
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15419,
+            "matched": 14611,
+            "f1": 94.3832563547689
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11776,
+            "matched": 11013,
+            "f1": 93.1922995557436
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6126,
+            "matched": 5671,
+            "f1": 92.24888165921107
+          }
+        }
+      },
+      "generalised bu ptb 2222": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8739,
+            "matched": 8231,
+            "f1": 93.43852877738676
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23689,
+            "matched": 22067,
+            "f1": 92.85699257295546
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7342,
+            "matched": 6468,
+            "f1": 87.86252801738776
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2315,
+            "matched": 1878,
+            "f1": 81.0880829015544
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1917,
+            "matched": 1549,
+            "f1": 82.04449152542372
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1246,
+            "matched": 1203,
+            "f1": 95.93301435406698
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9380,
+            "matched": 8948,
+            "f1": 95.07012324691883
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15446,
+            "matched": 14598,
+            "f1": 94.21711630308506
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11808,
+            "matched": 11044,
+            "f1": 93.32826298221151
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6122,
+            "matched": 5675,
+            "f1": 92.34399153852412
+          }
+        }
+      },
+      "generalised bu ptb 3333": {
+        "arity": {
+          "1": {
+            "gold": 8879,
+            "predicted": 8765,
+            "matched": 8238,
+            "f1": 93.38018589888914
+          },
+          "2": {
+            "gold": 23840,
+            "predicted": 23700,
+            "matched": 22080,
+            "f1": 92.89019772822886
+          },
+          "3": {
+            "gold": 7381,
+            "predicted": 7374,
+            "matched": 6533,
+            "f1": 88.55303287021349
+          },
+          "4": {
+            "gold": 2317,
+            "predicted": 2344,
+            "matched": 1907,
+            "f1": 81.82793391975972
+          },
+          "5": {
+            "gold": 1859,
+            "predicted": 1880,
+            "matched": 1549,
+            "f1": 82.85637871088527
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 270,
+            "gold": 1262,
+            "predicted": 1255,
+            "matched": 1202,
+            "f1": 95.51052840683353
+          },
+          "2": {
+            "sentences": 764,
+            "gold": 9444,
+            "predicted": 9402,
+            "matched": 8967,
+            "f1": 95.16077682266794
+          },
+          "3": {
+            "sentences": 778,
+            "gold": 15542,
+            "predicted": 15463,
+            "matched": 14645,
+            "f1": 94.4686340912756
+          },
+          "4": {
+            "sentences": 433,
+            "gold": 11859,
+            "predicted": 11810,
+            "matched": 11045,
+            "f1": 93.32882673539228
+          },
+          "5": {
+            "sentences": 171,
+            "gold": 6169,
+            "predicted": 6133,
+            "matched": 5667,
+            "f1": 92.13136075434889
+          }
+        }
+      },
+      "generalised bu ctb 1111": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3406,
+            "matched": 3126,
+            "f1": 90.76655052264809
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3689,
+            "matched": 3305,
+            "f1": 89.48152159198592
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1118,
+            "matched": 928,
+            "f1": 82.89414917373827
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 193,
+            "matched": 135,
+            "f1": 71.61803713527851
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 232,
+            "matched": 174,
+            "f1": 74.51820128479658
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 419,
+            "matched": 398,
+            "f1": 95.32934131736526
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1405,
+            "matched": 1308,
+            "f1": 92.08025343189018
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2340,
+            "matched": 2163,
+            "f1": 92.16020451640392
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1496,
+            "matched": 1356,
+            "f1": 90.70234113712375
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2978,
+            "matched": 2671,
+            "f1": 89.06302100700233
+          }
+        }
+      },
+      "generalised bu ctb 2222": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3371,
+            "matched": 3094,
+            "f1": 90.29622063329928
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3692,
+            "matched": 3275,
+            "f1": 88.63328822733423
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1105,
+            "matched": 906,
+            "f1": 81.40161725067385
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 189,
+            "matched": 125,
+            "f1": 67.02412868632707
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 238,
+            "matched": 172,
+            "f1": 72.72727272727273
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 415,
+            "matched": 391,
+            "f1": 94.1034897713598
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1405,
+            "matched": 1322,
+            "f1": 93.06582189369941
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2323,
+            "matched": 2142,
+            "f1": 91.59717767799872
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1496,
+            "matched": 1356,
+            "f1": 90.70234113712375
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2956,
+            "matched": 2609,
+            "f1": 87.31593038821954
+          }
+        }
+      },
+      "generalised bu ctb 3333": {
+        "arity": {
+          "1": {
+            "gold": 3482,
+            "predicted": 3409,
+            "matched": 3128,
+            "f1": 90.78508199100276
+          },
+          "2": {
+            "gold": 3698,
+            "predicted": 3689,
+            "matched": 3261,
+            "f1": 88.2902396101259
+          },
+          "3": {
+            "gold": 1121,
+            "predicted": 1139,
+            "matched": 926,
+            "f1": 81.94690265486726
+          },
+          "4": {
+            "gold": 184,
+            "predicted": 183,
+            "matched": 126,
+            "f1": 68.66485013623978
+          },
+          "5": {
+            "gold": 235,
+            "predicted": 233,
+            "matched": 167,
+            "f1": 71.36752136752136
+          }
+        },
+        "length": {
+          "1": {
+            "sentences": 96,
+            "gold": 416,
+            "predicted": 414,
+            "matched": 393,
+            "f1": 94.6987951807229
+          },
+          "2": {
+            "sentences": 81,
+            "gold": 1436,
+            "predicted": 1421,
+            "matched": 1324,
+            "f1": 92.68463423171158
+          },
+          "3": {
+            "sentences": 84,
+            "gold": 2354,
+            "predicted": 2346,
+            "matched": 2167,
+            "f1": 92.2127659574468
+          },
+          "4": {
+            "sentences": 38,
+            "gold": 1494,
+            "predicted": 1500,
+            "matched": 1361,
+            "f1": 90.91516366065464
+          },
+          "5": {
+            "sentences": 49,
+            "gold": 3020,
+            "predicted": 2972,
+            "matched": 2611,
+            "f1": 87.14953271028037
+          }
+        }
+      }
+    },
+    "seed_order": [
+      1111,
+      2222,
+      3333
+    ]
+  }
+}

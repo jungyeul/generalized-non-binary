@@ -1,0 +1,788 @@
+{
+  "seeds": [
+    1111,
+    2222,
+    3333
+  ],
+  "bucket_minima": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "method": "Sentence-level multiset intersection of exact label, start, end and number of immediate children. Outermost artificial ROOT and preterminals excluded. Punctuation retained. Exact arity matched before assigning to 5+ bucket. Sum matched, predicted and gold counts across sentences within seed; compute corpus F1 for each seed; average F1 across seeds with sample standard deviation.",
+  "gold_counts": {
+    "ptb": [
+      8879,
+      23840,
+      7381,
+      2317,
+      1859
+    ],
+    "ctb": [
+      3482,
+      3698,
+      1121,
+      184,
+      235
+    ]
+  },
+  "runs": {
+    "td_ptb": [
+      {
+        "seed": 1111,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ptb/seed_1111/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ptb/seed_1111/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8742,
+          23561,
+          7352,
+          2331,
+          1922
+        ],
+        "matches": [
+          8234,
+          22002,
+          6489,
+          1881,
+          1556
+        ],
+        "F1": [
+          93.4566710175359,
+          92.83348452564292,
+          88.08796579108125,
+          80.93803786574871,
+          82.30626818302036
+        ]
+      },
+      {
+        "seed": 2222,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ptb/seed_2222/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ptb/seed_2222/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8755,
+          23647,
+          7284,
+          2350,
+          1922
+        ],
+        "matches": [
+          8250,
+          22085,
+          6513,
+          1900,
+          1559
+        ],
+        "F1": [
+          93.5692412385165,
+          93.01493040200477,
+          88.8237299693147,
+          81.42275551746305,
+          82.46495636075113
+        ]
+      },
+      {
+        "seed": 3333,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ptb/seed_3333/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ptb/seed_3333/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8757,
+          23554,
+          7339,
+          2324,
+          1935
+        ],
+        "matches": [
+          8241,
+          21975,
+          6520,
+          1879,
+          1544
+        ],
+        "F1": [
+          93.45656611476525,
+          92.73325737435118,
+          88.58695652173913,
+          80.97392803275156,
+          81.39167105956774
+        ]
+      }
+    ],
+    "td_ctb": [
+      {
+        "seed": 1111,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ctb/seed_1111/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ctb/seed_1111/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3449,
+          3660,
+          1082,
+          206,
+          244
+        ],
+        "matches": [
+          3086,
+          3213,
+          887,
+          116,
+          163
+        ],
+        "F1": [
+          89.04919924974752,
+          87.3335145419951,
+          80.5265546981389,
+          59.48717948717949,
+          68.05845511482255
+        ]
+      },
+      {
+        "seed": 2222,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ctb/seed_2222/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ctb/seed_2222/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3429,
+          3673,
+          1093,
+          199,
+          239
+        ],
+        "matches": [
+          3101,
+          3225,
+          888,
+          123,
+          167
+        ],
+        "F1": [
+          89.74099262046013,
+          87.5050875050875,
+          80.21680216802169,
+          64.22976501305483,
+          70.46413502109705
+        ]
+      },
+      {
+        "seed": 3333,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ctb/seed_3333/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_td_static/ctb/seed_3333/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3401,
+          3650,
+          1106,
+          207,
+          235
+        ],
+        "matches": [
+          3100,
+          3232,
+          888,
+          125,
+          161
+        ],
+        "F1": [
+          90.07700130756938,
+          87.9695155144257,
+          79.74854063762909,
+          63.9386189258312,
+          68.51063829787235
+        ]
+      }
+    ],
+    "io_ptb": [
+      {
+        "seed": 1111,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ptb/seed_1111/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ptb/seed_1111/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8731,
+          23795,
+          7398,
+          2330,
+          1860
+        ],
+        "matches": [
+          8238,
+          22082,
+          6510,
+          1893,
+          1520
+        ],
+        "F1": [
+          93.56047700170357,
+          92.71334103075469,
+          88.09797685905677,
+          81.4719173660426,
+          81.74240387200861
+        ]
+      },
+      {
+        "seed": 2222,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ptb/seed_2222/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ptb/seed_2222/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8766,
+          23739,
+          7395,
+          2303,
+          1891
+        ],
+        "matches": [
+          8235,
+          22075,
+          6529,
+          1889,
+          1530
+        ],
+        "F1": [
+          93.34088977047323,
+          92.79303894575338,
+          88.37303735787764,
+          81.77489177489177,
+          81.6
+        ]
+      },
+      {
+        "seed": 3333,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ptb/seed_3333/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ptb/seed_3333/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8749,
+          23747,
+          7381,
+          2315,
+          1890
+        ],
+        "matches": [
+          8234,
+          22088,
+          6521,
+          1896,
+          1553
+        ],
+        "F1": [
+          93.41955979124121,
+          92.83207598713935,
+          88.34846226798537,
+          81.86528497409327,
+          82.84875966924513
+        ]
+      }
+    ],
+    "io_ctb": [
+      {
+        "seed": 1111,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ctb/seed_1111/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ctb/seed_1111/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3424,
+          3691,
+          1118,
+          204,
+          221
+        ],
+        "matches": [
+          3138,
+          3272,
+          910,
+          134,
+          169
+        ],
+        "F1": [
+          90.87749782797567,
+          88.56408174313168,
+          81.28628852166146,
+          69.0721649484536,
+          74.12280701754386
+        ]
+      },
+      {
+        "seed": 2222,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ctb/seed_2222/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ctb/seed_2222/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3411,
+          3735,
+          1110,
+          191,
+          230
+        ],
+        "matches": [
+          3096,
+          3276,
+          892,
+          125,
+          166
+        ],
+        "F1": [
+          89.8302625852314,
+          88.147450558321,
+          79.96414164051994,
+          66.66666666666667,
+          71.39784946236558
+        ]
+      },
+      {
+        "seed": 3333,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ctb/seed_3333/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_io_static/ctb/seed_3333/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3406,
+          3687,
+          1104,
+          197,
+          231
+        ],
+        "matches": [
+          3094,
+          3261,
+          897,
+          127,
+          169
+        ],
+        "F1": [
+          89.83739837398375,
+          88.31415030467163,
+          80.62921348314607,
+          66.66666666666667,
+          72.53218884120172
+        ]
+      }
+    ],
+    "bu_ptb": [
+      {
+        "seed": 1111,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ptb/seed_1111/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ptb/seed_1111/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8769,
+          23579,
+          7350,
+          2346,
+          1910
+        ],
+        "matches": [
+          8255,
+          22005,
+          6492,
+          1901,
+          1534
+        ],
+        "F1": [
+          93.55167724388032,
+          92.8108985849554,
+          88.14065575996199,
+          81.53549217242119,
+          81.40090209604669
+        ]
+      },
+      {
+        "seed": 2222,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ptb/seed_2222/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ptb/seed_2222/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8739,
+          23689,
+          7342,
+          2315,
+          1917
+        ],
+        "matches": [
+          8231,
+          22067,
+          6468,
+          1878,
+          1549
+        ],
+        "F1": [
+          93.43852877738676,
+          92.85699257295546,
+          87.86252801738776,
+          81.0880829015544,
+          82.04449152542372
+        ]
+      },
+      {
+        "seed": 3333,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ptb/seed_3333/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ptb/seed_3333/predictions/test.pred.mrg",
+        "predicted_counts": [
+          8765,
+          23700,
+          7374,
+          2344,
+          1880
+        ],
+        "matches": [
+          8238,
+          22080,
+          6533,
+          1907,
+          1549
+        ],
+        "F1": [
+          93.38018589888914,
+          92.89019772822886,
+          88.55303287021349,
+          81.82793391975972,
+          82.85637871088527
+        ]
+      }
+    ],
+    "bu_ctb": [
+      {
+        "seed": 1111,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ctb/seed_1111/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ctb/seed_1111/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3406,
+          3689,
+          1118,
+          193,
+          232
+        ],
+        "matches": [
+          3126,
+          3305,
+          928,
+          135,
+          174
+        ],
+        "F1": [
+          90.76655052264809,
+          89.48152159198592,
+          82.89414917373827,
+          71.61803713527851,
+          74.51820128479658
+        ]
+      },
+      {
+        "seed": 2222,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ctb/seed_2222/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ctb/seed_2222/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3371,
+          3692,
+          1105,
+          189,
+          238
+        ],
+        "matches": [
+          3094,
+          3275,
+          906,
+          125,
+          172
+        ],
+        "F1": [
+          90.29622063329928,
+          88.63328822733423,
+          81.40161725067385,
+          67.02412868632707,
+          72.72727272727273
+        ]
+      },
+      {
+        "seed": 3333,
+        "gold_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ctb/seed_3333/predictions/test.orig.mrg",
+        "prediction_path": "<EXPERIMENT_ROOT>/stanza-main-constituency-generalised/saved_models/constituency/generalised_bu_static/ctb/seed_3333/predictions/test.pred.mrg",
+        "predicted_counts": [
+          3409,
+          3689,
+          1139,
+          183,
+          233
+        ],
+        "matches": [
+          3128,
+          3261,
+          926,
+          126,
+          167
+        ],
+        "F1": [
+          90.78508199100276,
+          88.2902396101259,
+          81.94690265486726,
+          68.66485013623978,
+          71.36752136752136
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "td_ptb": {
+      "predicted_counts": [
+        8751.333333333334,
+        23587.333333333332,
+        7325,
+        2335,
+        1926.3333333333333
+      ],
+      "F1": [
+        93.49415945693922,
+        92.86055743399962,
+        88.49955076071168,
+        81.1115738053211,
+        82.05429853444642
+      ],
+      "F1_SD": [
+        0.06502275136259485,
+        0.14277475407806464,
+        0.3755889465738786,
+        0.2700880773017666,
+        0.5793115416474459
+      ]
+    },
+    "td_ctb": {
+      "predicted_counts": [
+        3426.3333333333335,
+        3661,
+        1093.6666666666667,
+        204,
+        239.33333333333334
+      ],
+      "F1": [
+        89.62239772592568,
+        87.6027058538361,
+        80.16396583459655,
+        62.55185447535517,
+        69.01107614459731
+      ],
+      "F1_SD": [
+        0.5240637645105234,
+        0.32904606933143465,
+        0.39168894314889313,
+        2.6580756381993025,
+        1.2785352876198859
+      ]
+    },
+    "io_ptb": {
+      "predicted_counts": [
+        8748.666666666666,
+        23760.333333333332,
+        7391.333333333333,
+        2316,
+        1880.3333333333333
+      ],
+      "F1": [
+        93.44030885447268,
+        92.7794853212158,
+        88.27315882830659,
+        81.70403137167588,
+        82.06372118041791
+      ],
+      "F1_SD": [
+        0.11125435159394896,
+        0.06051671686811613,
+        0.1522088220948016,
+        0.2060349881059394,
+        0.6835815879584903
+      ]
+    },
+    "io_ctb": {
+      "predicted_counts": [
+        3413.6666666666665,
+        3704.3333333333335,
+        1110.6666666666667,
+        197.33333333333334,
+        227.33333333333334
+      ],
+      "F1": [
+        90.18171959573027,
+        88.34189420204143,
+        80.62654788177582,
+        67.46849942726232,
+        72.68428177370372
+      ],
+      "F1_SD": [
+        0.6025721875594511,
+        0.20969663545259415,
+        0.6610774711794839,
+        1.388815080524868,
+        1.3688307471957917
+      ]
+    },
+    "bu_ptb": {
+      "predicted_counts": [
+        8757.666666666666,
+        23656,
+        7355.333333333333,
+        2335,
+        1902.3333333333333
+      ],
+      "F1": [
+        93.45679730671874,
+        92.8526962953799,
+        88.18540554918775,
+        81.4838363312451,
+        82.1005907774519
+      ],
+      "F1_SD": [
+        0.08719303139979769,
+        0.039823762149385725,
+        0.3474207041481285,
+        0.37262062037757226,
+        0.729358203247265
+      ]
+    },
+    "bu_ctb": {
+      "predicted_counts": [
+        3395.3333333333335,
+        3690,
+        1120.6666666666667,
+        188.33333333333334,
+        234.33333333333334
+      ],
+      "F1": [
+        90.61595104898338,
+        88.80168314314868,
+        82.08088969309313,
+        69.10233865261512,
+        72.87099845986356
+      ],
+      "F1_SD": [
+        0.27704964873644294,
+        0.6132339079260107,
+        0.7552332620793383,
+        2.327991808578174,
+        1.5802496005178774
+      ]
+    }
+  },
+  "train_action_inventories": {
+    "canonical_td_ptb": [
+      [
+        79
+      ],
+      [
+        79
+      ],
+      [
+        79
+      ]
+    ],
+    "canonical_td_ctb": [
+      [
+        65
+      ],
+      [
+        65
+      ],
+      [
+        65
+      ]
+    ],
+    "canonical_io_ptb": [
+      [
+        79
+      ],
+      [
+        79
+      ],
+      [
+        79
+      ]
+    ],
+    "canonical_io_ctb": [
+      [
+        65
+      ],
+      [
+        65
+      ],
+      [
+        65
+      ]
+    ],
+    "canonical_bu_ptb": [
+      [
+        251
+      ],
+      [
+        251
+      ],
+      [
+        251
+      ]
+    ],
+    "canonical_bu_ctb": [
+      [
+        227
+      ],
+      [
+        227
+      ],
+      [
+        227
+      ]
+    ],
+    "generalised_td_ptb": [
+      [
+        80
+      ],
+      [
+        80
+      ],
+      [
+        80
+      ]
+    ],
+    "generalised_td_ctb": [
+      [
+        66
+      ],
+      [
+        66
+      ],
+      [
+        66
+      ]
+    ],
+    "generalised_io_ptb": [
+      [
+        82
+      ],
+      [
+        82
+      ],
+      [
+        82
+      ]
+    ],
+    "generalised_io_ctb": [
+      [
+        68
+      ],
+      [
+        68
+      ],
+      [
+        68
+      ]
+    ],
+    "generalised_bu_ptb": [
+      [
+        82
+      ],
+      [
+        82
+      ],
+      [
+        82
+      ]
+    ],
+    "generalised_bu_ctb": [
+      [
+        68
+      ],
+      [
+        68
+      ],
+      [
+        68
+      ]
+    ]
+  },
+  "predictions_verified_against_scoring_records": true
+}
